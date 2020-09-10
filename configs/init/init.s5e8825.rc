@@ -177,6 +177,9 @@ on init
     chown system system /dev/device_throughput
     chown system system /dev/device_throughput_max
 
+    # VM
+    write /proc/sys/vm/dirty_expire_centisecs 3000
+
     # Power HAL
     chown system system /dev/cluster0_freq_min
     chown system system /dev/cluster0_freq_max
