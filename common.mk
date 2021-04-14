@@ -248,7 +248,8 @@ PRODUCT_COPY_FILES += $(COMMON_PATH)/configs/linker/public.libraries.txt:$(TARGE
 PRODUCT_PACKAGES += \
     cbd \
     secril_config_svc \
-    sehradiomanager
+    sehradiomanager \
+    CarrierConfigOverlay
 
 $(call soong_config_set,cbd,protocol,sipc)
 
