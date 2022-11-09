@@ -404,6 +404,10 @@ on early-boot
     # Update dm-verity state and set partition.*.verified properties
     verity_update_state
 
+    # Workarround for cache
+    rm /data/resource-cache
+    rm /data/system/package_cache
+
 on boot
 # SDHMS Slowdown : Cpuset
     mkdir /dev/cpuset/abnormal
