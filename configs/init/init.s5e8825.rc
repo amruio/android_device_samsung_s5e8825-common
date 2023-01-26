@@ -428,6 +428,9 @@ on boot
     write /sys/module/scsc_mx/parameters/disable_recovery_handling 2
     #settings put global captive_portal_mode 0
 
+    # default country code
+    setprop ro.boot.wificountrycode 00
+
 # Permissions DBMD8
     chmod 0660 /dev/dbmdx-1
     chown system audio /dev/dbmdx-1
