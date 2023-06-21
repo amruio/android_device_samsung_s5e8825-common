@@ -203,8 +203,8 @@ on init
     setprop ro.boot.hardware.revision ${ro.revision}
 
 on post-fs
-    # set RLIMIT_MEMLOCK to 64MB
-    setrlimit 8 67108864 67108864
+    # set RLIMIT_MEMLOCK to 64KB
+    setrlimit 8 65536 65536
 
 on post-fs-data
 # MST/NFC Switch
