@@ -126,7 +126,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
 # GMS
-PRODUCT_GMS_CLIENTID_BASE := android-samsung
+PRODUCT_GMS_CLIENTID_BASE := android-samsung-ss
 
 ## Graphics
 TARGET_USES_VULKAN := true
