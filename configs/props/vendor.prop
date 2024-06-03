@@ -71,6 +71,9 @@ ro.vendor.ddk.set.afbc=1
 ## Incremental FS
 ro.incremental.enable=true
 
+## LMK
+ro.lmk.kill_heaviest_task=true
+
 ## Media
 debug.stagefright.c2inputsurface=-1
 
