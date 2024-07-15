@@ -115,6 +115,8 @@ blob_fixups: blob_fixups_user_type = {
         .sig_replace('E0 17 9F 1A FD 7B C2 A8 C0 03 5F D6',
                     '20 00 80 52 FD 7B C2 A8 C0 03 5F D6'),
 
+    ('vendor/lib64/libdlbdsservice.so'): blob_fixup()
+        .replace_needed('libstagefright_foundation.so', 'libstagefright_foundation-v33.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
