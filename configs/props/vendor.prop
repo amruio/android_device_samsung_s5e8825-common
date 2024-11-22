@@ -94,6 +94,9 @@ ro.radio.noril=no
 vendor.rild.libpath=/vendor/lib64/libsec-ril.so
 vendor.sec.rild.libpath=/vendor/lib64/libsec-ril.so
 
+## SurfaceFlinger
+ro.surface_flinger.support_kernel_idle_timer=true
+
 ## Samsung specific
 ro.product_ship=true
 # Set csc support in OMX
