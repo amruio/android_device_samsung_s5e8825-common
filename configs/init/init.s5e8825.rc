@@ -13,7 +13,8 @@ on early-init
 
 on init
     # Permissions for fastcharge
-    chown system radio /sys/class/sec/switch/afc_disable
+    # Allow system to manipulate Fast Charge node
+    chown system system /sys/class/sec/switch/afc_disable
     chown system system /sys/class/power_supply/battery/charging_enabled
 
     # Disable UFS powersaving

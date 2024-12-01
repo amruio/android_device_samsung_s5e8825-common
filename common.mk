@@ -123,6 +123,10 @@ PRODUCT_PACKAGES += \
 # fastbootd
 PRODUCT_PACKAGES += fastbootd
 
+# FastCharge
+PRODUCT_PACKAGES += \
+    FastCharge
+
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint-service.s5e8825 \
@@ -184,6 +188,8 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
+PRODUCT_PACKAGES += \
+    FastChargeSec
 
 # Permissions
 PRODUCT_COPY_FILES += \
