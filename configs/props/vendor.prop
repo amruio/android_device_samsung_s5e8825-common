@@ -46,7 +46,7 @@ dalvik.vm.dex2oat64.enabled=true
 dalvik.vm.lockprof.threshold=500
 
 ## FRP
-ro.frp.pst=/dev/block/persistent
+ro.frp.pst=
 
 ## FUSE
 persist.sys.fuse.passthrough.enable=true
