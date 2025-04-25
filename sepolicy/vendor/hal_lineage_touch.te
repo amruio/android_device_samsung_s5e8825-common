@@ -1,0 +1,2 @@
+add_service(hal_lineage_touch_server, hal_lineage_touch_service)
+allow hal_lineage_touch_client hal_lineage_touch_service:service_manager find;
