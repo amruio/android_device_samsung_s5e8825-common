@@ -1,4 +1,4 @@
-# Common proprietary files - from Samsung package version P620XXS5AYB4, unless pinned
+# Common proprietary files - from Samsung package version A536BXXUEFYE2, unless pinned
 
 ## Audio
 vendor/etc/default_volume_tables.xml
@@ -31,6 +31,7 @@ vendor/lib64/hw/camera.s5e8825.so
 vendor/lib64/libexynoscamera_plugin.so
 
 ## Camera dependencies
+vendor/lib/libSEF.quram.so
 vendor/lib64/libMERTA.so
 vendor/lib64/libc++_shared.so
 vendor/lib64/libexynoscamera_merta_plugin.so
@@ -39,6 +40,7 @@ vendor/lib64/libexynoscamera_vpl_plugin.so
 vendor/lib64/libhwjsqz.so
 vendor/lib64/liblmecpu.so
 vendor/lib64/libsec2lsi_conversion.so
+vendor/lib64/libSEF.quram.so
 vendor/lib64/libsensorlistener.so
 vendor/lib64/libswlme.so
 vendor/lib64/libuniapi.so
@@ -55,30 +57,27 @@ vendor/etc/media_profiles_V1_0.xml
 vendor/firmware/OD_V2.1.6_01_26_QVGA.nnc
 vendor/firmware/OD_V2.3.7_02_05_VGA.nnc
 vendor/firmware/SetMultiCalInfo.bin
-vendor/firmware/dbmd8_va_asrp_fw.bin
-vendor/firmware/dbmd8_va_fw.bin
 vendor/firmware/default_configuration.flm.cfg.bin
-vendor/firmware/dual_cal_wide_swide.bin
-vendor/firmware/hx83102e_gta4xls.bin
+vendor/firmware/gt9895_a53x.bin
 vendor/firmware/is_lib.bin
 vendor/firmware/is_rta.bin
 vendor/firmware/listenbackeffect.bin
 vendor/firmware/lmecpu_GC5035.json
-vendor/firmware/lmecpu_S5K4HA.json
+vendor/firmware/lmecpu_S5KGD2.json
 vendor/firmware/rxse.bin
 vendor/firmware/sb_music.bin
 vendor/firmware/sb_others.bin
 vendor/firmware/sectiongraph_tplg.bin
 vendor/firmware/sectiongraph_tplg.conf
 vendor/firmware/secure_configuration.flm.cfg.bin
-vendor/firmware/setfile_4ha.bin
-vendor/firmware/setfile_gc5035.bin
+vendor/firmware/setfile_gw1.bin
+vendor/firmware/setfile_gc5035m.bin
 vendor/firmware/tfa9878.bin
 vendor/firmware/tfa98xx.cnt
 vendor/firmware/txse1.bin
 vendor/firmware/txse2.bin
 vendor/firmware/volumemonitor.bin
-vendor/firmware/w9021_gta4xls.bin
+vendor/firmware/gt9895_a53x.bin
 
 ## Gatekeeper
 vendor/lib/hw/gatekeeper.s5e8825.so
@@ -112,12 +111,10 @@ vendor/lib64/libskeymint_cli.so
 vendor/lib64/vendor.samsung.hardware.keymint-V1-ndk_platform.so
 
 # Ramdisk firmware
-vendor_ramdisk/vendor/firmware/hx83102e_gta4xls.bin
-vendor_ramdisk/vendor/firmware/w9021_gta4xls.bin
+vendor_ramdisk/vendor/firmware/gt9895_a53x.bin
 
 # Recovery firmware
-vendor_ramdisk/vendor/firmware/hx83102e_gta4xls.bin:recovery/root/vendor/firmware/hx83102e_gta4xls.bin
-vendor_ramdisk/vendor/firmware/w9021_gta4xls.bin:recovery/root/vendor/firmware/w9021_gta4xls.bin
+vendor_ramdisk/vendor/firmware/gt9895_a53x.bin:recovery/root/vendor/firmware/gt9895_a53x.bin
 
 ## RIL
 vendor/etc/init/init.baseband.rc
@@ -150,8 +147,9 @@ vendor/lib64/sensors.grip.so
 vendor/lib64/sensors.inputvirtual.so
 vendor/lib64/sensors.sensorhub.so
 
-## VNDK - from prebuilts/vndk/v33 - android-15.0.0_r20
-vendor/lib64/libcrypto-tm.so;FIX_SONAME|7291c0e41fa86b3739df0c0c20de21e88f43661a|f53b9d897921ade77c511eb98955db374fcc5c69
+## VNDK - from prebuilts/vndk/v33 - android-15.0.0_r32
+vendor/lib64/libcrypto-tm.so;FIX_SONAME|7291c0e41fa86b3739df0c0c20de21e88f43661a|2f70f36ad281cc21fe5939ba3ad82dc9c222f5f0
+vendor/lib64/libssl-tm.so;FIX_SONAME|25d0fcea69b588a9a2eedd8549f62920c92e371f|5e9bde815068909b673461066dae221dff98c978
 
 ## Widevine
 vendor/bin/hw/android.hardware.drm@1.4-service.widevine

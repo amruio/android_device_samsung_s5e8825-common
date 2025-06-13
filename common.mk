@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2020-2024 The LineageOS Project
+# Copyright (C) 2020-2025 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,12 +14,12 @@
 # limitations under the License.
 #
 
-COMMON_PATH := device/samsung/gta4xls-common
+COMMON_PATH := device/samsung/a53x-common
 
 # Get non-open-source specific aspects
-$(call inherit-product, vendor/samsung/gta4xls-common/gta4xls-common-vendor.mk)
+$(call inherit-product, vendor/samsung/a53x-common/a53x-common-vendor.mk)
 
-PRODUCT_CHARACTERISTICS := tablet
+PRODUCT_CHARACTERISTICS := phone
 
 # Enable project quotas and casefolding for emulated storage without sdcardfs
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)

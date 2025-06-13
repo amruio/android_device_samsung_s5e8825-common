@@ -1,6 +1,6 @@
 #!/usr/bin/env -S PYTHONPATH=../../../tools/extract-utils python3
 #
-# SPDX-FileCopyrightText: 2024 The LineageOS Project
+# SPDX-FileCopyrightText: 2025 The LineageOS Project
 # SPDX-License-Identifier: Apache-2.0
 #
 
@@ -19,7 +19,7 @@ from extract_utils.main import (
 )
 
 namespace_imports = [
-    'device/samsung/gta4xls-common',
+    'device/samsung/a53x-common',
     'hardware/samsung_slsi-linaro/exynos',
     'hardware/samsung_slsi-linaro/graphics',
 ]
@@ -28,7 +28,7 @@ def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
     return f'{lib}_{partition}' if partition == 'vendor' else None
 
 def lib_fixup_device_dep(lib: str, partition: str, *args, **kwargs):
-    return f'//device/samsung/gta4xls-common/shims/stub:{lib}'
+    return f'//device/samsung/a53x-common/shims/stub:{lib}'
 
 lib_fixups: lib_fixups_user_type = {
     libs_proto_3_9_1: lib_fixup_vendorcompat,
@@ -41,15 +41,21 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/bin/hw/android.hardware.security.keymint-service.samsung',
         'vendor/lib64/libskeymint10device.so',
         'vendor/lib64/libskeymint_cli.so',
+        'vendor/lib64/vendor.samsung.hardware.keymint-V1-ndk_platform.so',
     ): blob_fixup()
         .replace_needed('android.hardware.security.keymint-V1-ndk_platform.so',
             'android.hardware.security.keymint-V4-ndk.so')
+        .replace_needed('android.hardware.security.keymint-V1-ndk_platform',
+            'android.hardware.security.keymint-V4-ndk')
+        .replace_needed('android.hardware.security.keymint-V1-ndk',
+            'android.hardware.security.keymint-V4-ndk')
         .replace_needed('android.hardware.security.secureclock-V1-ndk_platform.so',
             'android.hardware.security.secureclock-V1-ndk.so')
         .replace_needed('android.hardware.security.sharedsecret-V1-ndk_platform.so',
              'android.hardware.security.sharedsecret-V1-ndk.so')
         .add_needed('android.hardware.security.rkp-V3-ndk.so')
         .replace_needed('libcrypto.so', 'libcrypto-tm.so')
+        .replace_needed('libssl.so', 'libssl-tm.so')
         .add_needed('libshim_crypto.so'),
     'vendor/etc/init/android.hardware.security.keymint-service.samsung.rc': blob_fixup()
         .regex_replace('android\\.hardware\\.security\\.keymint-service\n',
@@ -72,11 +78,15 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/vendor.samsung.hardware.keymint-V1-ndk_platform.so': blob_fixup()
         .replace_needed('android.hardware.security.keymint-V1-ndk_platform.so',
             'android.hardware.security.keymint-V4-ndk.so')
+        .replace_needed('android.hardware.security.keymint-V1-ndk',
+            'android.hardware.security.keymint-V4-ndk')
         .add_needed('android.hardware.security.rkp-V3-ndk.so'),
+    'vendor/lib64/libssl-tm.so': blob_fixup()
+        .replace_needed('libcrypto.so', 'libcrypto-tm.so')
 }  # fmt: skip
 
 module = ExtractUtilsModule(
-    'gta4xls-common',
+    'a53x-common',
     'samsung',
     namespace_imports=namespace_imports,
     blob_fixups=blob_fixups,
