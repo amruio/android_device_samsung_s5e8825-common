@@ -27,7 +27,7 @@
          Empty is viewed as "all".  Only used on devices which
          don't support RIL_REQUEST_GET_RADIO_CAPABILITY
          format is UMTS|LTE|... -->
-    <string translatable="false" name="config_radio_access_family">GSM|CDMA|EVDO|WCDMA|LTE</string>
+    <string translatable="false" name="config_radio_access_family">GSM|CDMA|EVDO|WCDMA|LTE|NR</string>
 
     <!-- Flag indicating whether we should enable the automatic brightness.
          Software implementation will be used if config_hardware_auto_brightness_available is not set -->
@@ -70,8 +70,8 @@
          when adapting to brighter or darker environments.  This parameter controls how quickly
          brightness changes occur in response to an observed change in light level that exceeds the
          hysteresis threshold. -->
-    <integer name="config_autoBrightnessBrighteningLightDebounce">2000</integer>
-    <integer name="config_autoBrightnessDarkeningLightDebounce">6000</integer>
+     <integer name="config_autoBrightnessBrighteningLightDebounce">500</integer>
+     <integer name="config_autoBrightnessDarkeningLightDebounce">3000</integer>
 
     <!-- Control whether Night display is available. This should only be enabled on devices
          that have a HWC implementation that can apply the matrix passed to setColorTransform
@@ -160,9 +160,9 @@
      -->
     <integer-array name="config_defaultNotificationVibePattern">
         <item>0</item>
-        <item>250</item>
-        <item>250</item>
-        <item>250</item>
+        <item>100</item>
+        <item>100</item>
+        <item>100</item>
     </integer-array>
 
     <!-- Whether device supports double tap to wake -->
@@ -205,13 +205,13 @@
          backlight values for lux levels between these control points.
          Must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLevels">
-        <item>8</item>
-        <item>15</item>
-        <item>25</item>
+        <item>10</item>
+        <item>40</item>
         <item>100</item>
-        <item>500</item>
-        <item>1500</item>
-        <item>5000</item>
+        <item>300</item>
+        <item>1000</item>
+        <item>3000</item>
+        <item>8000</item>
         <item>20000</item>
     </integer-array>
 
@@ -221,14 +221,14 @@
          The brightness values must be between 0 and 255 and be non-decreasing.
          This must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLcdBacklightValues">
-        <item>6</item>
+        <item>4</item>
+        <item>10</item>
         <item>20</item>
-        <item>38</item>
-        <item>55</item>
-        <item>93</item>
-        <item>143</item>
-        <item>199</item>
-        <item>255</item>
+        <item>35</item>
+        <item>70</item>
+        <item>120</item>
+        <item>180</item>
+        <item>230</item>
         <item>255</item>
     </integer-array>
 
