@@ -43,7 +43,7 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/vendor.samsung.hardware.keymint-V1-ndk_platform.so',
     ): blob_fixup()
         .replace_needed('android.hardware.security.keymint-V1-ndk_platform.so',
-            'android.hardware.security.keymint-V4-ndk.so')
+            'android.hardware.security.keymint-V3-ndk.so')
         .replace_needed('android.hardware.security.keymint-V1-ndk_platform',
             'android.hardware.security.keymint-V4-ndk')
         .replace_needed('android.hardware.security.keymint-V1-ndk',
@@ -76,7 +76,7 @@ blob_fixups: blob_fixups_user_type = {
         .binary_regex_replace(b'_ZN7android6Thread3runEPKcim', b'_ZN7utils326Thread3runEPKcim'),
     'vendor/lib64/vendor.samsung.hardware.keymint-V1-ndk_platform.so': blob_fixup()
         .replace_needed('android.hardware.security.keymint-V1-ndk_platform.so',
-            'android.hardware.security.keymint-V4-ndk.so')
+            'android.hardware.security.keymint-V3-ndk.so')
         .replace_needed('android.hardware.security.keymint-V1-ndk',
             'android.hardware.security.keymint-V4-ndk')
         .add_needed('android.hardware.security.rkp-V3-ndk.so'),
