@@ -128,6 +128,12 @@ vendor/lib64/libskeymint10device.so
 vendor/lib64/libskeymint_cli.so
 vendor/lib64/vendor.samsung.hardware.keymint-V1-ndk_platform.so
 
+# PROCA
+vendor/etc/init/pa_daemon_teegris.rc
+vendor/bin/vendor.samsung.hardware.security.proca@2.0-service
+vendor/app/mcRegistry/00060308060501020000000000000000.tabin
+vendor/app/mcRegistry/0706000000000000000000000000004d.tlbin
+
 # Ramdisk firmware
 vendor_ramdisk/vendor/firmware/gt9895_a53x.bin
 
