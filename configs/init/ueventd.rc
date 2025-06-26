@@ -44,13 +44,13 @@
 /dev/dma_heap/camera                0660   system     system
 /dev/dma_heap/camera-uncached       0660   system     system
 
-/dev/dma_heap/vframe-secure         0660   system     drmrpc
+/dev/dma_heap/vframe-secure         0660   system     graphics
 /dev/dma_heap/vscaler-secure        0660   system     system
 /dev/dma_heap/secure_camera-secure  0660   system     camera
 
 # dma-heap with prefix system-secure
 /dev/dma_heap/system-secure-gpu_buffer-secure     0444   system     system
-/dev/dma_heap/system-secure-vstream-secure        0444   system     drmrpc
+/dev/dma_heap/system-secure-vstream-secure        0444   system     graphics 
 
 # gscalers
 /dev/video23              0660   media      graphics
