@@ -1,0 +1,5 @@
+runtime_resource_overlay {
+    name: "WifiOverlayS5E8825",
+    theme: "WifiOverlayS5E8825",
+    vendor: true
+}

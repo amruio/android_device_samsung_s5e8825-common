@@ -19,16 +19,18 @@ from extract_utils.main import (
 )
 
 namespace_imports = [
-    'device/samsung/a53x-common',
+    'device/samsung/s5e8825-common',
+    'hardware/samsung',
     'hardware/samsung_slsi-linaro/exynos',
     'hardware/samsung_slsi-linaro/graphics',
+    'hardware/samsung_slsi-linaro/interfaces',
 ]
 
 def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
     return f'{lib}_{partition}' if partition == 'vendor' else None
 
 def lib_fixup_device_dep(lib: str, partition: str, *args, **kwargs):
-    return f'//device/samsung/a53x-common/shims/stub:{lib}'
+    return f'//device/samsung/s5e8825-common/shims/stub:{lib}'
 
 lib_fixups: lib_fixups_user_type = {
     libs_proto_3_9_1: lib_fixup_vendorcompat,
@@ -82,11 +84,14 @@ blob_fixups: blob_fixups_user_type = {
             'android.hardware.security.keymint-V4-ndk')
         .add_needed('android.hardware.security.rkp-V3-ndk.so'),
     'vendor/lib64/libssl-tm.so': blob_fixup()
-        .replace_needed('libcrypto.so', 'libcrypto-tm.so')
+        .replace_needed('libcrypto.so', 'libcrypto-tm.so'),
+    'vendor/lib64/libsec-ril.so': blob_fixup()
+        .sig_replace('80 0E 40 F9 E1 03 16 AA 82 0C 80 52 E3 03 15 AA',
+            '80 0E 40 F9 E1 03 16 AA 82 0C 80 52 08 00 80 D2'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
-    'a53x-common',
+    's5e8825-common',
     'samsung',
     namespace_imports=namespace_imports,
     blob_fixups=blob_fixups,

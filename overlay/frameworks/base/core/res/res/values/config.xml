@@ -256,11 +256,6 @@
          rotations as the default behavior. -->
     <bool name="config_allowAllRotations">true</bool>
 
-    <!-- Status bar. -->
-    <dimen name="status_bar_height">87.0px</dimen>
-    <dimen name="status_bar_height_portrait">87.0px</dimen>
-    <dimen name="status_bar_height_landscape">87.0px</dimen>
-
     <!-- brightness. -->
     <integer name="config_screenBrightnessSettingDefault">128</integer>
     <integer name="config_screenBrightnessSettingMaximum">255</integer>

@@ -6,6 +6,6 @@
 
 soong_namespace {
     imports: [
-        "vendor/samsung/a53x-common",
+        "vendor/samsung/s5e8825-common",
     ],
 }

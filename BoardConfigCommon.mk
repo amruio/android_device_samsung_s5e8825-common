@@ -13,10 +13,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-COMMON_PATH := device/samsung/a53x-common
+COMMON_PATH := device/samsung/s5e8825-common
 
 ## Inherit proprietary vendor configuartion
-include vendor/samsung/a53x-common/BoardConfigVendor.mk
+include vendor/samsung/s5e8825-common/BoardConfigVendor.mk
 
 # TEMP
 BUILD_BROKEN_PREBUILT_ELF_FILES := true
@@ -37,7 +37,7 @@ TARGET_2ND_CPU_VARIANT := generic
 
 ## Audio
 $(call soong_config_set,exynos_audio,PREDEFINED_LOW_CAPTURE_DURATION,20)
-$(call soong_config_set,exynos_audio,PROXY_LIBRARY,//device/samsung/a53x-common:libaudioproxy)
+$(call soong_config_set,exynos_audio,PROXY_LIBRARY,//device/samsung/s5e8825-common:libaudioproxy)
 
 ## Bluetooth
 BOARD_HAVE_BLUETOOTH_SLSI := true
