@@ -156,15 +156,7 @@ vendor/etc/init/wifi.rc
 vendor/etc/init/wifi_slsi.rc
 vendor/etc/wifi/indoorchannel.info
 vendor/etc/wifi/mx140.bin
-vendor/etc/wifi/mx140_common.hcf
 vendor/etc/wifi/mx140_t.bin
-vendor/etc/wifi/mx140_t_wlan.hcf
-vendor/etc/wifi/mx140_t_wlan_t.hcf
-vendor/etc/wifi/mx140_wlan.hcf
-vendor/etc/wifi/mx140_wlan_sw.hcf
-vendor/etc/wifi/mx140_wlan_t.hcf
-vendor/etc/wifi/mx140_wlan_t_sw.hcf
-vendor/etc/wifi/slsi_reg_database.bin
 
 # Vaultkeeper
 vendor/etc/init/vaultkeeper_common.rc
