@@ -40,9 +40,6 @@ lib_fixups: lib_fixups_user_type = {
 
 blob_fixups: blob_fixups_user_type = {
     (
-        'vendor/bin/hw/android.hardware.security.keymint-service.samsung',
-        'vendor/lib64/libskeymint10device.so',
-        'vendor/lib64/libskeymint_cli.so',
         'vendor/lib64/vendor.samsung.hardware.keymint-V1-ndk_platform.so',
     ): blob_fixup()
         .replace_needed('android.hardware.security.keymint-V1-ndk_platform.so',
