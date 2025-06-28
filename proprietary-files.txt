@@ -149,3 +149,9 @@ vendor/etc/wifi/mx140_t.bin
 
 # Vaultkeeper
 vendor/etc/init/vaultkeeper_common.rc
+
+# Vibrator
+vendor/bin/hw/vendor.samsung.hardware.vibrator-service
+vendor/etc/init/vendor.samsung.hardware.vibrator-default.rc
+vendor/etc/vintf/manifest/vendor.samsung.hardware.vibrator-default.xml
+vendor/lib64/vendor.samsung.hardware.vibrator-V5-ndk_platform.so
