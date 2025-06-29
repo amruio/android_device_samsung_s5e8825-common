@@ -36,7 +36,7 @@ bluetooth.profile.pbap.server.enabled=true
 bluetooth.profile.sap.server.enabled=true
 
 # Camera
-vendor.camera.aux.packagelist=org.lineageos.aperture
+vendor.camera.aux.packagelist=org.lineageos.aperture,com.android.camera
 
 ## Dalvik
 dalvik.vm.dex2oat64.enabled=true
