@@ -34,6 +34,18 @@ vendor/etc/media_codecs_c2.xml
 vendor/etc/media_codecs_performance.xml
 vendor/etc/media_profiles_V1_0.xml
 
+## Fingerprint
+vendor/etc/init/fingerprint_common.rc
+vendor/etc/init/init.fingerprint.rc
+vendor/lib/libegis_fp_normal_sensor_test.so
+vendor/lib/libqfp_sensortest.so
+vendor/lib/libgf_in_system_lib.so
+vendor/lib/libsynaFpSensorTestNwd.so
+vendor/lib64/libegis_fp_normal_sensor_test.so
+vendor/lib64/libqfp_sensortest.so
+vendor/lib64/libgf_in_system_lib.so
+vendor/lib64/libsynaFpSensorTestNwd.so
+
 ## Gatekeeper
 vendor/lib/hw/gatekeeper.s5e8825.so
 vendor/lib64/hw/gatekeeper.s5e8825.so
