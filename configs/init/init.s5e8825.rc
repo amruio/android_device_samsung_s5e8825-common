@@ -1007,6 +1007,7 @@ on post-fs
     chown radio system /efs/carrier/HiddenMenu
 
 # KERNEL CORE MEMORY
-on boot
-    write /proc/sys/vm/swappiness 145
+on property:sys.boot_completed=1
+    swapon_all /vendor/etc/fstab.${ro.hardware}
+    write /proc/sys/vm/swappiness 130
     write /sys/module/zram/parameters/zram_balance_ratio 30
