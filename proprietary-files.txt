@@ -74,6 +74,9 @@ vendor/lib64/hw/vulkan.mali.so
 vendor/etc/init/android.hardware.security.keymint-service.rc:vendor/etc/init/android.hardware.security.keymint-service.samsung.rc
 vendor/lib64/vendor.samsung.hardware.keymint-V1-ndk_platform.so
 
+## NFC
+vendor/etc/init/init.nfc.samsung.rc
+
 # PROCA
 vendor/etc/init/pa_daemon_teegris.rc
 vendor/bin/vendor.samsung.hardware.security.proca@2.0-service
