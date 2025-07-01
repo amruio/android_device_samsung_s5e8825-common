@@ -41,6 +41,13 @@ bluetooth.profile.sap.server.enabled=true
 # Camera
 vendor.camera.aux.packagelist=org.lineageos.aperture,com.android.camera
 
+# Codec
+debug.c2.use_dmabufheaps=1
+media.c2.dmabuf.padding=512
+debug.stagefright.ccodec_delayed_params=1
+ro.vendor.gpu.dataspace=1
+debug.codec2.stop_hal_before_surface=1
+
 ## Dalvik
 dalvik.vm.dex2oat64.enabled=true
 dalvik.vm.lockprof.threshold=500
