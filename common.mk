@@ -72,6 +72,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libvpl
 
+PRODUCT_PACKAGES += \
+    libshim_camera
+
 # Charger
 PRODUCT_PACKAGES += \
     charger_res_images_vendor
