@@ -34,7 +34,6 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.service \
     android.hardware.bluetooth.audio-impl \
     audio.bluetooth.default \
-    audio.primary.universal8825 \
     audio.r_submix.default \
     audio.usb.default
 
@@ -250,7 +249,6 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/pixel \
     hardware/samsung \
     hardware/samsung_slsi-linaro/exynos/cpboot_v3 \
-    hardware/samsung_slsi-linaro/exynos/libaudio/audiohal \
     hardware/samsung_slsi/libbt
 
 # Thermal
