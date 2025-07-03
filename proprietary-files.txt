@@ -1,14 +1,72 @@
 # Common proprietary files - from Samsung package version A536BXXSFFYEA, unless pinned
 
-## Audio
-vendor/etc/default_volume_tables.xml
+# Audio
+vendor/bin/hw/secaudiohalaidl
+vendor/etc/SoundBoosterParam.txt
 vendor/etc/dolby/dax-default.xml
-vendor/etc/usb_audio_policy_configuration.xml
+vendor/etc/floating_feature.xml
+vendor/etc/init/secaudiohalaidl.rc
+vendor/etc/mixer_usb_default.xml
+vendor/etc/mixer_usb_gray.xml
+vendor/etc/mixer_usb_white.xml
+vendor/etc/vintf/manifest/secaudiohalaidl_manifest.xml
+vendor/lib/hw/audio.primary.s5e8825.so
+vendor/lib/hw/sound_trigger.primary.s5e8825.so
+vendor/lib/hw/vendor.samsung.hardware.audio@1.0-impl.so
+vendor/lib/libSamsungPostProcessConvertor.so
+vendor/lib/lib_SamsungRec_07010.so
+vendor/lib/lib_SoundAlive_3DPosition_ver202.so
+vendor/lib/lib_SoundAlive_AlbumArt_ver105.so
+vendor/lib/lib_SoundAlive_SRC384_ver320.so
+vendor/lib/lib_SoundAlive_play_plus_ver400.so
+vendor/lib/lib_SoundBooster_ver1100.so
+vendor/lib/lib_soundaliveresampler.so
+vendor/lib/libaboxpcmdump.so
+vendor/lib/libalsautils_sec.so
+vendor/lib/libaudioparamupdate.so
+vendor/lib/libaudioproxy2.so
+vendor/lib/libdatamod.so
+vendor/lib/libfloatingfeature.so
+vendor/lib/liblastaboxmsg.so
+vendor/lib/librecordalive.so
+vendor/lib/libsecaudiocoreutils.so
+vendor/lib/libsecaudioinfo.so
+vendor/lib/libspeakercalibration.so
+vendor/lib/soundfx/libaudioeffectoffload.so
+vendor/lib/soundfx/libaudiosaplus_sec.so
+vendor/lib/soundfx/libmyspace.so
+vendor/lib/soundfx/libsamsungSoundbooster_plus.so
+vendor/lib/soundfx/libswdap.so
+vendor/lib/vndk/libaudioroute.so:vendor/lib/libaudioroute.s5e8825.so;MODULE=libaudioroute.s5e8825
+vendor/lib/vndk/libtinyalsa.so:vendor/lib/libtinyalsa.s5e8825.so;MODULE=libtinyalsa.s5e8825
+vendor/lib/vendor.samsung.hardware.audio@1.0.so
+vendor/lib64/hw/libsecaudiohal_aidl.so
+vendor/lib64/hw/vendor.samsung.hardware.audio@1.0-impl.so
+vendor/lib64/lib_SoundAlive_3DPosition_ver202.so
+vendor/lib64/lib_SoundAlive_AlbumArt_ver105.so
+vendor/lib64/lib_SoundAlive_play_plus_ver400.so
+vendor/lib64/lib_SoundBooster_ver1100.so
+vendor/lib64/libsecaudiocoreutils.so
+vendor/lib64/libsecaudioinfo.so
+vendor/lib64/libspeakercalibration.so
+vendor/lib64/soundfx/libaudioeffectoffload.so
+vendor/lib64/soundfx/libaudiosaplus_sec.so
+vendor/lib64/soundfx/libmyspace.so
+vendor/lib64/soundfx/libsamsungSoundbooster_plus.so
+vendor/lib64/vendor.samsung.hardware.audio@1.0.so
+vendor/lib64/vendor.samsung.hardware.audio-V1-ndk_platform.so
+
+## Audio - Bluetooth
+vendor/lib/vendor.samsung.hardware.bluetooth.a2dp@1.0.so
+vendor/lib/vendor.samsung_slsi.hardware.ExynosA2DPOffload@3.0.so
+vendor/lib64/vendor.samsung.hardware.bluetooth.a2dp@1.0.so
+vendor/lib64/vendor.samsung_slsi.hardware.ExynosA2DPOffload@3.0.so
 
 ## Audio - Dolby Atmos
 vendor/lib/libprofileparamstorage.so
-vendor/lib/libsecaudiocoreutils.so
 vendor/lib/libspatializerparamstorage.so
+vendor/lib64/libprofileparamstorage.so
+vendor/lib64/libspatializerparamstorage.so
 
 ## Camera
 vendor/lib/libexynoscamera_plugin.so
@@ -94,6 +152,7 @@ vendor/etc/plmn_delta.bin
 vendor/etc/plmn_delta_chn.bin
 vendor/etc/plmn_delta_hktw.bin
 vendor/etc/plmn_se13_prebuilt.bin
+vendor/lib/libaudio-ril.so
 vendor/lib64/libfloatingfeature.so
 vendor/lib64/libvkmanager_vendor.so
 vendor/lib64/vendor.samsung.hardware.radio.channel@2.0.so
