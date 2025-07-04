@@ -138,9 +138,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.fastcharge@1.0-service.samsung
 
+ifneq ($(TARGET_HAS_UDFPS),true)
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint-service.samsung
+endif
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
