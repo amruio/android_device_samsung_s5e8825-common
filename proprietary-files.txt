@@ -32,11 +32,6 @@ vendor/lib/librecordalive.so
 vendor/lib/libsecaudiocoreutils.so
 vendor/lib/libsecaudioinfo.so
 vendor/lib/libspeakercalibration.so
-vendor/lib/soundfx/libaudioeffectoffload.so
-vendor/lib/soundfx/libaudiosaplus_sec.so
-vendor/lib/soundfx/libmyspace.so
-vendor/lib/soundfx/libsamsungSoundbooster_plus.so
-vendor/lib/soundfx/libswdap.so
 vendor/lib/vndk/libaudioroute.so:vendor/lib/libaudioroute.s5e8825.so;MODULE=libaudioroute.s5e8825
 vendor/lib/vndk/libtinyalsa.so:vendor/lib/libtinyalsa.s5e8825.so;MODULE=libtinyalsa.s5e8825
 vendor/lib/vendor.samsung.hardware.audio@1.0.so
@@ -49,12 +44,18 @@ vendor/lib64/lib_SoundBooster_ver1100.so
 vendor/lib64/libsecaudiocoreutils.so
 vendor/lib64/libsecaudioinfo.so
 vendor/lib64/libspeakercalibration.so
+vendor/lib64/vendor.samsung.hardware.audio@1.0.so
+vendor/lib64/vendor.samsung.hardware.audio-V1-ndk_platform.so
+
+## Audio - Effects
+vendor/lib/soundfx/libaudioeffectoffload.so
+vendor/lib/soundfx/libaudiosaplus_sec.so
+vendor/lib/soundfx/libmyspace.so
+vendor/lib/soundfx/libsamsungSoundbooster_plus.so
 vendor/lib64/soundfx/libaudioeffectoffload.so
 vendor/lib64/soundfx/libaudiosaplus_sec.so
 vendor/lib64/soundfx/libmyspace.so
 vendor/lib64/soundfx/libsamsungSoundbooster_plus.so
-vendor/lib64/vendor.samsung.hardware.audio@1.0.so
-vendor/lib64/vendor.samsung.hardware.audio-V1-ndk_platform.so
 
 ## Audio - Bluetooth
 vendor/lib/vendor.samsung.hardware.bluetooth.a2dp@1.0.so
@@ -65,6 +66,7 @@ vendor/lib64/vendor.samsung_slsi.hardware.ExynosA2DPOffload@3.0.so
 ## Audio - Dolby Atmos
 vendor/lib/libprofileparamstorage.so
 vendor/lib/libspatializerparamstorage.so
+vendor/lib/soundfx/libswdap.so
 vendor/lib64/libprofileparamstorage.so
 vendor/lib64/libspatializerparamstorage.so
 
