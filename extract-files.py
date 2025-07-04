@@ -90,6 +90,9 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/libsec-ril.so': blob_fixup()
         .sig_replace('80 0E 40 F9 E1 03 16 AA 82 0C 80 52 E3 03 15 AA',
             '80 0E 40 F9 E1 03 16 AA 82 0C 80 52 08 00 80 D2'),
+    'vendor/lib/soundfx/libswdap.so': blob_fixup()
+        .sig_replace('30 46 88 47 07 46 30 68',
+                     '30 46 88 47 01 27 30 68'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
