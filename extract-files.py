@@ -68,11 +68,6 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libtinyalsa.so', 'libtinyalsa.s5e8825.so'),
     'vendor/lib64/libwvhidl.so': blob_fixup()
         .replace_needed('libprotobuf-cpp-lite-3.9.1.so', 'libprotobuf-cpp-full-3.9.1.so'),
-    'vendor/etc/vintf/manifest/sec_c2_manifest_default0_1_0.xml': blob_fixup()
-        .regex_replace(
-            r'(?m)^[ \t]*<instance>default0</instance>[ \t]*(?:\r?\n)+',
-            ''
-        ),
     (
         'vendor/lib/sensors.grip.so',
         'vendor/lib/sensors.inputvirtual.so',
