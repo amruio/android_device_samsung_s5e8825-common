@@ -182,6 +182,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default
 
+# Media
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/configs/media/media_codecs_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2.xml \
+    $(COMMON_PATH)/configs/media/media_codecs_performance_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_c2.xml \
+
 # Memtrack
 PRODUCT_PACKAGES += \
     android.hardware.memtrack-service.samsung-mali
