@@ -89,7 +89,6 @@ vendor/lib64/libswcnr.so
 
 ## Codecs
 vendor/etc/media_codecs.xml
-vendor/etc/media_codecs_c2.xml|4616789f371e1a2c3be8bd71cceaa1525668472d
 vendor/etc/media_codecs_performance.xml
 vendor/etc/media_profiles_V1_0.xml
 
