@@ -74,6 +74,7 @@ $(call soong_config_set,samsungCameraVars,usage_64bit,true)
 
 ## Codec2
 $(call soong_config_set,openmax,legacy_mfc,true)
+$(call soong_config_set,openmax,USE_CSC_FILTER,true)
 
 ## Display
 BOARD_MINIMUM_DISPLAY_BRIGHTNESS := 1
