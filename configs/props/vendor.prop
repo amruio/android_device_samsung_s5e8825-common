@@ -1,13 +1,3 @@
-# Adaptive Refresh Rate
-ro.surface_flinger.use_content_detection_for_refresh_rate=true
-ro.surface_flinger.set_display_power_timer_ms=200
-ro.surface_flinger.set_idle_timer_ms=250
-ro.surface_flinger.set_touch_timer_ms=300
-vendor.display.idle_time=1100
-
-## Blur
-ro.surface_flinger.supports_background_blur=1
-
 ## Adoptable Storage
 ro.crypto.volume.options=aes-256-xts:aes-256-cts:v2
 
@@ -38,12 +28,25 @@ bluetooth.profile.pan.panu.enabled=true
 bluetooth.profile.pbap.server.enabled=true
 bluetooth.profile.sap.server.enabled=true
 
-# Camera
+## Blur
+ro.surface_flinger.supports_background_blur=1
+
+## Camera
 vendor.camera.aux.packagelist=org.lineageos.aperture,com.android.camera
 
 ## Dalvik
 dalvik.vm.dex2oat64.enabled=true
 dalvik.vm.lockprof.threshold=500
+
+## Display
+ro.surface_flinger.use_color_management=true
+ro.surface_flinger.has_wide_color_display=true
+ro.surface_flinger.has_HDR_display=true
+ro.surface_flinger.use_content_detection_for_refresh_rate=true
+ro.surface_flinger.set_display_power_timer_ms=200
+ro.surface_flinger.set_idle_timer_ms=250
+ro.surface_flinger.set_touch_timer_ms=300
+vendor.display.idle_time=1100
 
 ## FRP
 ro.frp.pst=
@@ -67,7 +70,7 @@ ro.vendor.ddk.set.afbc=1
 ## Incremental FS
 ro.incremental.enable=true
 
-# Media
+## Media
 debug.stagefright.c2inputsurface=-1
 
 ## Metadata Encryption
@@ -76,7 +79,7 @@ ro.crypto.dm_default_key.options_format.version=2
 ro.crypto.metadata_init_delete_all_keys.enabled=true
 ro.crypto.volume.metadata.method=dm-default-key
 
-# OEM Unlock
+## OEM Unlock
 ro.oem_unlock_supported=1
 
 ## Power HAL
@@ -101,8 +104,3 @@ ro.soc.model=Exynos 1280
 ## Wi-Fi
 wifi.direct.interface=p2p0
 ro.boot.wificountrycode=00
-
-# Display
-ro.surface_flinger.use_color_management=true
-ro.surface_flinger.has_wide_color_display=true
-ro.surface_flinger.has_HDR_display=true
