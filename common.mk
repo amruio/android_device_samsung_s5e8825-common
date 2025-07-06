@@ -27,6 +27,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 # Soong namespaces
 $(call inherit-product, hardware/samsung_slsi-linaro/config/config.mk)
 
+# Private keys
+$(call inherit-product-if-exists, vendor/lineage-priv/keys/keys.mk)
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio.effect@6.0-impl:32 \
@@ -321,6 +324,3 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
 
 PRODUCT_CFI_INCLUDE_PATHS += hardware/samsung_slsi/scsc_wifibt/wpa_supplicant_lib
-
-# Private keys
--include vendor/lineage-priv/keys/keys.mk
