@@ -174,8 +174,8 @@ PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
 
 # Health
 PRODUCT_PACKAGES += \
-    android.hardware.health-service.samsung \
-    android.hardware.health-service.samsung-recovery
+    android.hardware.health-service.s5e8825 \
+    android.hardware.health-service.s5e8825-recovery
 
 # init
 PRODUCT_COPY_FILES += \
