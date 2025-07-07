@@ -1,6 +1,9 @@
 # Camera
 persist.vendor.sys.camera.    u:object_r:vendor_camera_prop:s0
 
+# FPS
+vendor.finger.down	          u:object_r:vendor_udfps_prop:s0
+
 # HWC
 vendor.hwc.                   u:object_r:vendor_hwc_prop:s0
 
