@@ -131,6 +131,7 @@ PRODUCT_GMS_CLIENTID_BASE := android-samsung-ss
 ## Graphics
 TARGET_USES_VULKAN := true
 BOARD_USES_HWC_CPU_PERF_MODE := true
+$(call soong_config_set,exynos_hwc,HWC_FORCE_CLIENT_VIDEO,true)
 
 ## Kernel
 BOARD_KERNEL_IMAGE_NAME := Image
