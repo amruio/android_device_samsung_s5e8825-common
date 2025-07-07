@@ -35,7 +35,6 @@ ro.surface_flinger.supports_background_blur=1
 vendor.camera.aux.packagelist=org.lineageos.aperture,com.android.camera
 
 ## Dalvik
-dalvik.vm.dex2oat64.enabled=true
 dalvik.vm.lockprof.threshold=500
 
 ## Display
