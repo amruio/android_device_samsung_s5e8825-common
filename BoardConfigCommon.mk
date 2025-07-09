@@ -18,9 +18,6 @@ COMMON_PATH := device/samsung/s5e8825-common
 ## Inherit proprietary vendor configuartion
 include vendor/samsung/s5e8825-common/BoardConfigVendor.mk
 
-# TEMP
-BUILD_BROKEN_PREBUILT_ELF_FILES := true
-
 ## Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-2a-dotprod

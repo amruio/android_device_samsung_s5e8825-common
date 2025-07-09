@@ -31,8 +31,8 @@ vendor/lib/librecordalive.so
 vendor/lib/libsecaudiocoreutils.so
 vendor/lib/libsecaudioinfo.so
 vendor/lib/libspeakercalibration.so
-vendor/lib/vndk/libaudioroute.so:vendor/lib/libaudioroute.s5e8825.so;MODULE=libaudioroute.s5e8825
-vendor/lib/vndk/libtinyalsa.so:vendor/lib/libtinyalsa.s5e8825.so;MODULE=libtinyalsa.s5e8825
+vendor/lib/vndk/libaudioroute.so:vendor/lib/libaudioroute.s5e8825.so;MODULE=libaudioroute.s5e8825;FIX_SONAME
+vendor/lib/vndk/libtinyalsa.so:vendor/lib/libtinyalsa.s5e8825.so;MODULE=libtinyalsa.s5e8825;FIX_SONAME
 vendor/lib/vendor.samsung.hardware.audio@1.0.so
 vendor/lib64/hw/libsecaudiohal_aidl.so
 vendor/lib64/hw/vendor.samsung.hardware.audio@1.0-impl.so
@@ -98,11 +98,11 @@ vendor/etc/init/init.fingerprint.rc
 vendor/lib/libegis_fp_normal_sensor_test.so
 vendor/lib/libqfp_sensortest.so
 vendor/lib/libgf_in_system_lib.so
-vendor/lib/libsynaFpSensorTestNwd.so
+vendor/lib/libsynaFpSensorTestNwd.so;DISABLE_CHECKELF
 vendor/lib64/libegis_fp_normal_sensor_test.so
 vendor/lib64/libqfp_sensortest.so
 vendor/lib64/libgf_in_system_lib.so
-vendor/lib64/libsynaFpSensorTestNwd.so
+vendor/lib64/libsynaFpSensorTestNwd.so;DISABLE_CHECKELF
 
 ## Gatekeeper
 vendor/lib/hw/gatekeeper.s5e8825.so
