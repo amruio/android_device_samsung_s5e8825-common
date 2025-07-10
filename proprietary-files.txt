@@ -3,7 +3,6 @@
 # Audio
 vendor/bin/hw/secaudiohalaidl
 vendor/etc/dolby/dax-default.xml
-vendor/etc/floating_feature.xml
 vendor/etc/init/secaudiohalaidl.rc
 vendor/etc/mixer_usb_default.xml
 vendor/etc/mixer_usb_gray.xml
@@ -143,7 +142,6 @@ vendor/lib64/libengmode_client.so
 vendor/bin/cass
 vendor/etc/init/cass.rc
 vendor/etc/init/init.vendor.rilcommon.rc
-vendor/etc/floating_feature.xml
 vendor/etc/plmn_delta.bin
 vendor/etc/plmn_delta_chn.bin
 vendor/etc/plmn_delta_hktw.bin
