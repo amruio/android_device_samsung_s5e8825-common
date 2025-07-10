@@ -13,11 +13,7 @@ vendor/lib/hw/sound_trigger.primary.s5e8825.so
 vendor/lib/hw/vendor.samsung.hardware.audio@1.0-impl.so
 vendor/lib/libSamsungPostProcessConvertor.so
 vendor/lib/lib_SamsungRec_07010.so
-vendor/lib/lib_SoundAlive_3DPosition_ver202.so
-vendor/lib/lib_SoundAlive_AlbumArt_ver105.so
 vendor/lib/lib_SoundAlive_SRC384_ver320.so
-vendor/lib/lib_SoundAlive_play_plus_ver400.so
-vendor/lib/lib_SoundBooster_ver1100.so
 vendor/lib/lib_soundaliveresampler.so
 vendor/lib/libaboxpcmdump.so
 vendor/lib/libalsautils_sec.so
@@ -35,10 +31,6 @@ vendor/lib/vndk/libtinyalsa.so:vendor/lib/libtinyalsa.s5e8825.so;MODULE=libtinya
 vendor/lib/vendor.samsung.hardware.audio@1.0.so
 vendor/lib64/hw/libsecaudiohal_aidl.so
 vendor/lib64/hw/vendor.samsung.hardware.audio@1.0-impl.so
-vendor/lib64/lib_SoundAlive_3DPosition_ver202.so
-vendor/lib64/lib_SoundAlive_AlbumArt_ver105.so
-vendor/lib64/lib_SoundAlive_play_plus_ver400.so
-vendor/lib64/lib_SoundBooster_ver1100.so
 vendor/lib64/libsecaudiocoreutils.so
 vendor/lib64/libsecaudioinfo.so
 vendor/lib64/libspeakercalibration.so
@@ -47,13 +39,7 @@ vendor/lib64/vendor.samsung.hardware.audio-V1-ndk_platform.so
 
 ## Audio - Effects
 vendor/lib/soundfx/libaudioeffectoffload.so
-vendor/lib/soundfx/libaudiosaplus_sec.so
-vendor/lib/soundfx/libmyspace.so
-vendor/lib/soundfx/libsamsungSoundbooster_plus.so
 vendor/lib64/soundfx/libaudioeffectoffload.so
-vendor/lib64/soundfx/libaudiosaplus_sec.so
-vendor/lib64/soundfx/libmyspace.so
-vendor/lib64/soundfx/libsamsungSoundbooster_plus.so
 
 ## Audio - Bluetooth
 vendor/lib/vendor.samsung.hardware.bluetooth.a2dp@1.0.so
