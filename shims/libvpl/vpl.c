@@ -14,23 +14,30 @@
  * limitations under the License.
  */
 
-void vplPreLoadWithPath() {
+int vplPreLoadWithPath() {
+    return 0;
 }
 
-void vplPreLoad() {
+int vplPreLoad() {
+    return 0;
 }
 
-void vplUnload() {
+int vplUnload() {
+    return 0;
 }
 
-void createVpl() {
+int createVpl() {
+    return 0;
 }
 
-void destroyVpl() {
+int destroyVpl() {
+    return 0;
 }
 
-void vplHandleArray() {
+int vplHandleArray() {
+    return 0;
 }
 
-void vplSetCameraProperties() {
+int vplSetCameraProperties() {
+    return 0;
 }
