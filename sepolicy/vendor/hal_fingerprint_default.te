@@ -1,6 +1,8 @@
 allow hal_fingerprint_default uhid_device:chr_file rw_file_perms;
 
 r_dir_file(hal_fingerprint_default, efs_file);
+allow hal_fingerprint_default sec_efs_file:dir rw_dir_perms;
+allow hal_fingerprint_default sec_efs_file:file create_file_perms;
 
 # UDFPS
 set_prop(hal_fingerprint_default, vendor_udfps_prop);
