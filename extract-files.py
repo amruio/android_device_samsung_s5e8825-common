@@ -94,11 +94,6 @@ blob_fixups: blob_fixups_user_type = {
         .sig_replace('30 46 88 47 07 46 30 68',
                      '30 46 88 47 01 27 30 68'),
     (
-        'vendor/lib/lib_SoundAlive_play_plus_ver400.so',
-        'vendor/lib64/lib_SoundAlive_play_plus_ver400.so',
-    ): blob_fixup()
-        .add_needed('liblog-samsung.so'),
-    (
         'vendor/lib/libaudioparamupdate.so',
         'vendor/lib/libaboxpcmdump.so',
         'vendor/lib/libaudioproxy2.so',
