@@ -29,7 +29,7 @@ $(call inherit-product, hardware/samsung_slsi-linaro/config/config.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
 # Private keys
-$(call inherit-product-if-exists, vendor/lineage-priv/keys/keys.mk)
+$(call inherit-product-if-exists, vendor/aosp-priv/keys/keys.mk)
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -134,10 +134,6 @@ PRODUCT_PACKAGES += \
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
-# DOZE
-PRODUCT_PACKAGES += \
-    SamsungDoze
-    
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
