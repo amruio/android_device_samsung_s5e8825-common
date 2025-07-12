@@ -8,3 +8,5 @@ dalvik.vm.image-dex2oat-threads=4
 ## Vsync
 debug.cpurend.vsync=false
 
+## Pixel props
+persist.sys.pixelprops.pi=false
