@@ -127,6 +127,7 @@ vendor/app/mcRegistry/00060308060501020000000000000000.tabin
 vendor/app/mcRegistry/0706000000000000000000000000004d.tlbin
 
 ## RIL
+vendor/bin/secril_config_svc
 vendor/etc/init/init.baseband.rc
 vendor/lib64/libengmode_client.so
 vendor/bin/cass
