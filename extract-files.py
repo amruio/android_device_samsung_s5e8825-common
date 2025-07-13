@@ -61,11 +61,6 @@ blob_fixups: blob_fixups_user_type = {
             'android.hardware.security.keymint-service.samsung\n'),
     'vendor/lib64/libsensorlistener.so': blob_fixup()
         .add_needed('libshim_sensorndkbridge.so'),
-    'vendor/lib/soundfx/libaudioeffectoffload.so': blob_fixup()
-        .replace_needed('libtinyalsa.so', 'libtinyalsa.s5e8825.so'),
-    'vendor/lib/hw/audio.primary.s5e8825.so': blob_fixup()
-        .replace_needed('libaudioroute.so', 'libaudioroute.s5e8825.so')
-        .replace_needed('libtinyalsa.so', 'libtinyalsa.s5e8825.so'),
     'vendor/lib64/libwvhidl.so': blob_fixup()
         .replace_needed('libprotobuf-cpp-lite-3.9.1.so', 'libprotobuf-cpp-full-3.9.1.so'),
     (
@@ -93,13 +88,6 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib/soundfx/libswdap.so': blob_fixup()
         .sig_replace('30 46 88 47 07 46 30 68',
                      '30 46 88 47 01 27 30 68'),
-    (
-        'vendor/lib/libaudioparamupdate.so',
-        'vendor/lib/libaboxpcmdump.so',
-        'vendor/lib/libaudioproxy2.so',
-    ): blob_fixup()
-        .add_needed('libaudioroute.s5e8825.so')
-        .add_needed('libtinyalsa.s5e8825.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
