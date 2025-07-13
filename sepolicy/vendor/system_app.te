@@ -1,2 +1,5 @@
 # UDFPS
 set_prop(system_app, vendor_udfps_prop)
+
+# FM
+allow system_app fm_device:chr_file { read write open ioctl };
