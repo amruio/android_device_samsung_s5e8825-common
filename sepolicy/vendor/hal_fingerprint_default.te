@@ -6,3 +6,8 @@ allow hal_fingerprint_default sec_efs_file:file create_file_perms;
 
 # UDFPS
 set_prop(hal_fingerprint_default, vendor_udfps_prop);
+
+allow hal_fingerprint_default fingerprint_device:chr_file rw_file_perms;
+allow hal_fingerprint_default sysfs_lcd_writable:dir search;
+allow hal_fingerprint_default sysfs_lcd_writable:file r_file_perms;
+allow hal_fingerprint_default sysfs_backlight_writable:file rw_file_perms;
