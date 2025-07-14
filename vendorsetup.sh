@@ -24,3 +24,9 @@ if [ -d "system/nfc" ] && ! grep "nfa_t4tnfcee_is_config" system/nfc/src/nfa/inc
   git fetch https://github.com/LineageOS/android_system_nfc refs/changes/55/423355/1 && git cherry-pick FETCH_HEAD
   cd -
 fi
+
+if [ -d "frameworks/base" ] && ! grep "doubleTapEnabledNative" frameworks/base/packages/SystemUI/src/com/android/systemui/shade/PulsingGestureListener.kt > /dev/null; then
+  cd frameworks/base
+  curl https://github.com/LineageOS/android_frameworks_base/commit/47e8dd78fe833098bff660c355846bccc6b7e69a.patch | git am
+  cd -
+fi
