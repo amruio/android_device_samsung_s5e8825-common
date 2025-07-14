@@ -281,7 +281,7 @@ struct pcm_config pcm_config_deep_playback_suhqa = {
 
 // PCM Configurations for Voice RX Playback Stream
 #define VRX_PLAYBACK_CARD               SOUND_CARD0
-#define VRX_PLAYBACK_DEVICE             SOUND_DEVICE_ABOX_RDMA4
+#define VRX_PLAYBACK_DEVICE             104
 
 #define VRX_PLAYBACK_CHANNELS           DEFAULT_VOICE_CHANNELS
 #define VRX_PLAYBACK_SAMPLING_RATE      DEFAULT_VOICE_SAMPLING_RATE
@@ -659,7 +659,7 @@ struct pcm_config pcm_config_mmap_capture = {
 
 // PCM Configurations for Voice TX Capture Stream
 #define VTX_CAPTURE_CARD                SOUND_CARD0
-#define VTX_CAPTURE_DEVICE              SOUND_DEVICE_ABOX_RDMA10
+#define VTX_CAPTURE_DEVICE              113
 
 #define VTX_CAPTURE_CHANNELS            DEFAULT_VOICE_CHANNELS
 #define VTX_CAPTURE_SAMPLING_RATE       DEFAULT_VOICE_SAMPLING_RATE
