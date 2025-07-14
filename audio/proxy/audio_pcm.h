@@ -326,11 +326,11 @@ struct compr_config compr_config_offload_playback = {
 // Internal loopback related PCM node configurations
 // PCM Configurations for BT-SCO Playback Stream
 #define BTSCO_ERAP_CARD                 SOUND_CARD0
-#define BTSCO_PLAYBACK_ERAP_DEVICE      SOUND_DEVICE_ABOX_RDMA8
-#define BTSCO_CAPTURE_ERAP_DEVICE       SOUND_DEVICE_ABOX_RDMA6
+#define BTSCO_PLAYBACK_ERAP_DEVICE      SOUND_DEVICE_ABOX_RDMA11
+#define BTSCO_CAPTURE_ERAP_DEVICE       SOUND_DEVICE_ABOX_WDMA6
 
 #define BTSCO_ERAP_CHANNELS         DEFAULT_VOICE_CHANNELS
-#define BTSCO_ERAP_SAMPLING_RATE    SAMPLING_RATE_FB
+#define BTSCO_ERAP_SAMPLING_RATE    SAMPLING_RATE_WB
 #define BTSCO_ERAP_PERIOD_SIZE      80
 #define BTSCO_ERAP_PERIOD_COUNT     2
 #define BTSCO_ERAP_FORMAT           DEFAULT_MEDIA_FORMAT
@@ -360,8 +360,8 @@ unsigned int btsco_erap_device[BTSCO_MAX_ERAP_IDX][2] = {
     [1] = {BTSCO_ERAP_CARD, BTSCO_CAPTURE_ERAP_DEVICE},
 };
 unsigned int btsco_erap_flag[BTSCO_MAX_ERAP_IDX] = {
-    [BTSCO_SPK_ERAP_IDX] = (PCM_IN | PCM_MONOTONIC),
-    [BTSCO_MIC_ERAP_IDX] = (PCM_OUT | PCM_MONOTONIC),
+    [BTSCO_SPK_ERAP_IDX] = (PCM_OUT | PCM_MONOTONIC),
+    [BTSCO_MIC_ERAP_IDX] = (PCM_IN | PCM_MONOTONIC),
 };
 
 // Internal loopback related PCM node configurations
