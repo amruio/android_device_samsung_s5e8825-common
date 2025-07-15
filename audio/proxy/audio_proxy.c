@@ -937,6 +937,7 @@ err_open:
 
 static void disable_btsco_erap(void *proxy, int i)
 {
+#if 0
     struct audio_proxy *aproxy = proxy;
     char pcm_path[MAX_PCM_PATH_LEN];
 
@@ -959,10 +960,12 @@ static void disable_btsco_erap(void *proxy, int i)
     }
 
     return ;
+#endif
 }
 
 static void enable_btsco_erap(void *proxy, int i)
 {
+#if 0
     struct audio_proxy *aproxy = proxy;
     struct pcm_config pcmconfig = pcm_config_btsco;
     char pcm_path[MAX_PCM_PATH_LEN];
@@ -1008,6 +1011,7 @@ static void enable_btsco_erap(void *proxy, int i)
 err_open:
     disable_btsco_erap(proxy, i);
     return ;
+#endif
 }
 
 #ifdef SUPPORT_BTA2DP_OFFLOAD
