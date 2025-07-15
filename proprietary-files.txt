@@ -13,10 +13,6 @@ vendor/lib/soundfx/libswdap.so
 vendor/lib64/libprofileparamstorage.so
 vendor/lib64/libspatializerparamstorage.so
 
-# Audio - Dependencies
-system/lib/liblog.so:vendor/lib/liblog-samsung.so;FIX_SONAME
-system/lib64/liblog.so:vendor/lib64/liblog-samsung.so;FIX_SONAME
-
 ## Camera
 vendor/lib/libexynoscamera_plugin.so
 vendor/lib64/libexynoscamera_plugin.so
