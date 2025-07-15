@@ -292,7 +292,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/pixel \
     hardware/samsung \
     hardware/samsung_slsi-linaro/exynos/cpboot_v3 \
-    hardware/samsung_slsi-linaro/exynos/libaudio/audiohal \
+    $(COMMON_PATH)/audio/libaudio/audiohal \
     hardware/samsung_slsi/libbt
 
 # Thermal
