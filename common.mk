@@ -41,6 +41,7 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio-impl \
     audio.bluetooth.default \
     audio.primary.erd8825 \
+    audio.primary.default \
     audio.r_submix.default \
     audio.usb.default
 
