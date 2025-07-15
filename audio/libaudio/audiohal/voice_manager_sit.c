@@ -465,7 +465,7 @@ struct voice_manager* voice_init(void)
         voice->out_device = AUDIO_DEVICE_NONE;
         voice->in_device_id = DEVICE_INVALID;
         voice->bluetooth_nrec = BT_NREC_INITIALIZED;
-        voice->bluetooth_samplerate = NB_SAMPLING_RATE;
+        voice->bluetooth_samplerate = WB_SAMPLING_RATE;
         voice->tty_mode = TTY_MODE_OFF;
         voice->call_forwarding = false;
         voice->mute_voice = false;
