@@ -46,7 +46,7 @@ PRODUCT_PACKAGES += \
     audio.usb.default
 
 PRODUCT_PACKAGES += \
-    SamsungDAP
+    SamsungDAP-custom
 
 TARGET_EXCLUDES_AUDIOFX := true
 
