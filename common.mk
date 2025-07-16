@@ -301,13 +301,8 @@ PRODUCT_SOONG_NAMESPACES += \
     $(COMMON_PATH)/audio/libaudio/audiohal \
     hardware/samsung_slsi/libbt
 
-# Thermal
-PRODUCT_PACKAGES += \
-    android.hardware.thermal-service.pixel \
-    thermal_symlinks
-
-PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/thermal/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
+# PRODUCT_COPY_FILES += \
+#     $(COMMON_PATH)/configs/thermal/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
 
 # Touch HAL
 PRODUCT_PACKAGES += \
