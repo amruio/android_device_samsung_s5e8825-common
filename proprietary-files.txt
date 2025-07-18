@@ -62,10 +62,10 @@ vendor/lib64/libwrappergps.so
 vendor/lib64/vendor.samsung.hardware.gnss@2.0.so
 vendor/lib64/vendor.samsung.hardware.gnss@2.1.so
 
-## Graphics - from a54x - A546BXXUCDYDB
-vendor/lib/egl/libGLES_mali.so;SYMLINK=vendor/lib/libOpenCL.so,vendor/lib/libOpenCL.so.1,vendor/lib/libOpenCL.so.1.1|c10109aacafe9f8eca4745c51fd06e604bc25f89
+## Graphics - from a54x - A546BXXUEEYG6
+vendor/lib/egl/libGLES_mali.so;SYMLINK=vendor/lib/libOpenCL.so,vendor/lib/libOpenCL.so.1,vendor/lib/libOpenCL.so.1.1|711aa91cdfb560c8572b907bda39ec47c8b80704
 vendor/lib/hw/vulkan.mali.so|f9ccc82ce4a822a4f294c2f03280de9b7026ca00
-vendor/lib64/egl/libGLES_mali.so;SYMLINK=vendor/lib64/libOpenCL.so,vendor/lib64/libOpenCL.so.1,vendor/lib64/libOpenCL.so.1.1|c4e937bddd63787f391ec52ea453c9c8b4a41834
+vendor/lib64/egl/libGLES_mali.so;SYMLINK=vendor/lib64/libOpenCL.so,vendor/lib64/libOpenCL.so.1,vendor/lib64/libOpenCL.so.1.1|26347450b538041a2b08d9a0e145ad22358352d8
 vendor/lib64/hw/vulkan.mali.so|8d5c6634ec83b9d1940eb8327e2d84a2c3c6da56
 
 ## Keymint
@@ -98,20 +98,20 @@ vendor/lib64/libfloatingfeature.so
 vendor/lib64/libvkmanager_vendor.so
 vendor/lib64/vendor.samsung.hardware.radio.channel@2.0.so
 
-## RIL - from a54x - A546BXXSDDYF1
+## RIL - from a54x - A546BXXUEEYG6
 vendor/bin/hw/rild|249bd469620af395bcca58153d40cee6c28bdcb5
-vendor/etc/init/vendor.samsung.rilchip.slsi.rc|9ab6b924d2f5ae56a408a55d67c142e7082a00e0
+vendor/etc/init/vendor.samsung.rilchip.slsi.rc|da39a3ee5e6b4b0d3255bfef95601890afd80709
 vendor/etc/init/vendor.samsung.rild.rc|a4cc7e6d99aa026b4dc438d73b260d4143ae26b6
 vendor/etc/mtu-conf.xml|5bac5f518c1573e774758d2133518cc227134099
 vendor/etc/vintf/manifest/vendor.samsung.hardware.radio.exclude.slsi.xml|c3f8ea3f6228f2d572081b0c0ae29a251de4350b
-vendor/etc/vintf/manifest/vendor.samsung.hardware.radio_manifest_2_33.xml|e9cdde9d05c5cce32f76bbb164437f43b3288157
+vendor/etc/vintf/manifest/vendor.samsung.hardware.radio_manifest_2_33.xml|a4efe27cfafe7bbc3c1c84beceddefee94c95404
 vendor/etc/vintf/manifest/vendor.samsung.hardware.sehradio_manifest_2_33.xml|ebbe359a9b2d78cb88debe79d9183c039afb7c01
-vendor/lib/libsecril-client.so|fd7cb317ad17fd6c5b94c69bc4eaef80631215f1
-vendor/lib/libsemnativecarrierfeature.so|efd42aa2111a3afabe7a00dc98d7464516c435f1
-vendor/lib64/libril_sem.so|d66b065f6deb695e3498fd31a21737c25adae2e1
-vendor/lib64/libsec-ril.so|f1319b486f942fd0525de9037424ba9d305d080b|01a3f85b22ea3aabc07551829bc9bfbd1b0d2f1c
+vendor/lib/libsecril-client.so|37068d751c2a8e3eb345d341930054618968b42d
+vendor/lib/libsemnativecarrierfeature.so|67855bb0ca26a5b20e1339569c0bda6b7a54dca8
+vendor/lib64/libril_sem.so|530e35e015bc8d6ba9c5994be59d6e2a897ae9ff
+vendor/lib64/libsec-ril.so|756db28309f2fa83bde28eb92119f55973645b22|8bc7a940db00cd6c232b6aa8b191e72848b01e39
 vendor/lib64/libsecril-client.so|bae84e05d1c19dc5b41bfe2326dbf2744b1e412c
-vendor/lib64/libsemnativecarrierfeature.so|04fd039d7ef5718818cb91d4991453f457fe9896
+vendor/lib64/libsemnativecarrierfeature.so|a7907b181a34d557b2fcc70125a894b1823339d6
 vendor/lib64/vendor.samsung.hardware.radio-V1-ndk.so|738bc9ac0ca800b36e8b08652240ee01ddba6e47
 vendor/lib64/vendor.samsung.hardware.radio.bridge-V1-ndk.so|6faa7fbeab4b7d335d434729ec22493fde30028c
 vendor/lib64/vendor.samsung.hardware.radio.channel-V1-ndk.so|fc3522bd787fa48ab80f53c0836cbb0c5ddf1b10
