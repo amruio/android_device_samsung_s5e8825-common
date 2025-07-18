@@ -5,6 +5,7 @@ ro.crypto.volume.options=aes-256-xts:aes-256-cts:v2
 ro.apk_verity.mode=2
 
 ## Audio
+audio.timecheck.timeout_duration_ms=10000
 audio.offload.min.duration.secs=30
 aaudio.mmap_policy=2
 aaudio.mmap_exclusive_policy=2
