@@ -121,6 +121,11 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@4.0-service \
     android.hardware.graphics.mapper@4.0-impl
 
+# Display color mode (default "Natural")
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.sf.color_saturation=1.0 \
+    persist.sys.sf.native_mode=0
+
 PRODUCT_PACKAGES += \
     android.hardware.composer.hwc3-service.slsi
 
