@@ -220,7 +220,8 @@ BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 ifeq ($(TARGET_HAS_UDFPS),true)
 ## UDFPS
 TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS := 0x2000U | 0x400000000LL
-$(call soong_config_set,surfaceflinger,udfps_lib,//$(COMMON_PATH):libudfps_extension.s5e8825)
+$(call soong_config_set,samsung_udfps,udfps_zorder,0x20000000u)
+$(call soong_config_set,surfaceflinger,udfps_lib,//hardware/samsung/fingerprint:libudfps_extension.samsung)
 endif
 
 ## USB
