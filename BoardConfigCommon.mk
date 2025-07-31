@@ -78,6 +78,8 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_RAMDISK_USE_LZ4 := true
 
 ## Camera
+$(call soong_config_set,samsungCameraVars,extra_ids,60)
+$(call soong_config_set,samsungCameraVars,needs_sec_reserved_field,true)
 $(call soong_config_set,samsungCameraVars,usage_64bit,true)
 
 ## Codec2
