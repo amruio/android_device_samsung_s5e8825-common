@@ -13,6 +13,10 @@ on early-init
     exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules mz_tee_driver.ko
 
 on init
+    # Disable UFS powersaving
+    write /sys/devices/platform/13500000.ufs/clkgate_enable 0
+    write /sys/devices/platform/13500000.ufs/auto_hibern8 0
+
     symlink /dev/block/by-name/steady /dev/block/steady
     symlink /dev/block/by-name/persistent /dev/block/persistent
     symlink /dev/block/by-name/param /dev/block/param
@@ -1020,3 +1024,7 @@ on property:sys.boot_completed=1
     mkdir /efs/carrier 0755 radio system
     chown radio system /efs/carrier
     chown radio system /efs/carrier/HiddenMenu
+
+    # Enable UFS powersaving
+    write /sys/devices/platform/13500000.ufs/clkgate_enable 1
+    write /sys/devices/platform/13500000.ufs/auto_hibern8 2000
