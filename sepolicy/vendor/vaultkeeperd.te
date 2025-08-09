@@ -1,5 +1,6 @@
 # vaultkeeperd.te
 allow vaultkeeperd spu_block_device:blk_file { ioctl open read write };
+allow vaultkeeperd hwservicemanager_prop:file { map getattr read open };
 
 get_prop(vaultkeeperd, vendor_vaultkeeper_prop)
 
