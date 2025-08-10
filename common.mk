@@ -223,7 +223,6 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
-PRODUCT_ENFORCE_RRO_TARGETS += *
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -324,7 +323,6 @@ PRODUCT_PACKAGES += \
 
 # WiFi
 PRODUCT_PACKAGES += \
-    WifiOverlayS5E8825 \
     android.hardware.wifi-service \
     hostapd \
     wpa_supplicant
