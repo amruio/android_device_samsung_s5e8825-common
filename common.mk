@@ -19,8 +19,6 @@ COMMON_PATH := device/samsung/s5e8825-common
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/samsung/s5e8825-common/s5e8825-common-vendor.mk)
 
-PRODUCT_CHARACTERISTICS := phone
-
 # Enable project quotas and casefolding for emulated storage without sdcardfs
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
