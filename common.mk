@@ -194,6 +194,12 @@ PRODUCT_ENABLE_UFFD_GC := true
 PRODUCT_PACKAGES += \
     toolbox.vendor_ramdisk
 
+ifeq ($(PRODUCT_CHARACTERISTICS),tablet)
+# Keylayout
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/configs/idc/sec_e-pen.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/sec_e-pen.idc
+endif
+
 # Lineage Health
 PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default
