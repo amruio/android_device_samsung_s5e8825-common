@@ -160,9 +160,6 @@ ifeq ($(TARGET_HAS_UDFPS),true)
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.3-service-samsung.s5e8825 \
     sensors.samsung
-
-$(call soong_config_set,samsung_udfps,udfps_zorder,0x20000000u)
-$(call soong_config_set,surfaceflinger,udfps_lib,//hardware/samsung/fingerprint:libudfps_extension.samsung)
 endif
 
 # Gatekeeper

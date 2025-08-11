@@ -219,11 +219,6 @@ include device/samsung_slsi/sepolicy/sepolicy.mk
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/public
 BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 
-ifeq ($(TARGET_HAS_UDFPS),true)
-## UDFPS
-TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS := 0x2000U | 0x400000000LL
-endif
-
 ## USB
 $(call soong_config_set,samsungUsbGadgetVars,gadget_name,13200000.dwc3)
 
