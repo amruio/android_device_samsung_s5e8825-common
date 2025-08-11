@@ -63,7 +63,6 @@
 /sys/devices/virtual/camera(/.*)                              u:object_r:sysfs_camera:s0
 
 # Fingerprint
-/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@[0-9]\.[0-9]-service-samsung\.s5e8825  u:object_r:hal_fingerprint_default_exec:s0
 /dev/goodix_fp                                                u:object_r:fingerprint_device:s0
 
 # Media

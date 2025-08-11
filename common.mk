@@ -149,14 +149,11 @@ PRODUCT_PACKAGES += \
     vendor.lineage.fastcharge@1.0-service.samsung
 
 # Fingerprint
-ifneq ($(TARGET_HAS_UDFPS),true)
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint-service.samsung
-endif
 
 ifeq ($(TARGET_HAS_UDFPS),true)
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.3-service-samsung.s5e8825 \
     sensors.samsung \
     UdfpsHandler_s5e8825
 endif
