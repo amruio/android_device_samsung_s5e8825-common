@@ -29,7 +29,7 @@ $(call inherit-product, hardware/samsung_slsi-linaro/config/config.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
 # Private keys
-$(call inherit-product-if-exists, vendor/lineage-priv/keys/keys.mk)
+$(call inherit-product-if-exists, vendor/aosp-priv/keys/keys.mk)
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -134,10 +134,6 @@ PRODUCT_PACKAGES += \
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
-# DOZE
-PRODUCT_PACKAGES += \
-    SamsungDoze
-    
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
@@ -200,14 +196,6 @@ PRODUCT_PACKAGES += \
 # Kernel Modules
 PRODUCT_PACKAGES += \
     toolbox.vendor_ramdisk
-
-# Lineage Health
-PRODUCT_PACKAGES += \
-    vendor.lineage.health-service.default
-
-$(call soong_config_set,lineage_health,fast_charge_node,/sys/class/sec/switch/afc_disable)
-$(call soong_config_set,lineage_health,fast_charge_value_none,1)
-$(call soong_config_set,lineage_health,fast_charge_value_fast_charge,0)
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -311,10 +299,6 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # PRODUCT_COPY_FILES += \
 #     $(COMMON_PATH)/configs/thermal/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
-
-# Touch HAL
-PRODUCT_PACKAGES += \
-    vendor.lineage.touch-service.samsung
 
 # Update
 AB_OTA_UPDATER := false

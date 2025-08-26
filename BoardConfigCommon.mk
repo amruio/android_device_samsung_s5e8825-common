@@ -102,7 +102,14 @@ BOARD_SAMSUNG_DYNAMIC_PARTITIONS_PARTITION_LIST := \
     product \
     odm
 
--include vendor/lineage/config/BoardConfigReservedSize.mk
+ifeq (,$(filter true, $(WITHOUT_RESERVED_SIZE) $(WITH_GMS)))
+    BOARD_PRODUCTIMAGE_EXTFS_INODE_COUNT ?= -1
+    BOARD_PRODUCTIMAGE_PARTITION_RESERVED_SIZE ?= 470000000
+    BOARD_SYSTEMIMAGE_EXTFS_INODE_COUNT ?= -1
+    BOARD_SYSTEM_EXTIMAGE_EXTFS_INODE_COUNT ?= -1
+    BOARD_SYSTEMIMAGE_PARTITION_RESERVED_SIZE ?= 94371840
+    BOARD_SYSTEM_EXTIMAGE_PARTITION_RESERVED_SIZE ?= 94371840
+endif
 
 ## DTB
 BOARD_DTB_CFG := $(COMMON_PATH)/configs/kernel/s5e8825.cfg
@@ -163,8 +170,7 @@ BOARD_VENDOR_RAMDISK_FRAGMENT.dlkm.KERNEL_MODULE_DIRS := top
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     $(COMMON_PATH)/configs/vintf/framework_compatibility_matrix.xml \
-    hardware/samsung/vintf/samsung_framework_compatibility_matrix.xml \
-    vendor/lineage/config/device_framework_matrix.xml
+    hardware/samsung/vintf/samsung_framework_compatibility_matrix.xml
 DEVICE_MANIFEST_FILE += $(COMMON_PATH)/configs/vintf/manifest.xml
 DEVICE_MATRIX_FILE := $(COMMON_PATH)/configs/vintf/compatibility_matrix.xml
 
@@ -213,7 +219,6 @@ VENDOR_SECURITY_PATCH := 2025-08-01
 
 ## SELinux
 BOARD_SEPOLICY_TEE_FLAVOR := teegris
-include device/lineage/sepolicy/exynos/sepolicy.mk
 include device/samsung_slsi/sepolicy/sepolicy.mk
 
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/public
