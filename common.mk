@@ -33,12 +33,11 @@ $(call inherit-product-if-exists, vendor/lineage-priv/keys/keys.mk)
 
 # Audio
 PRODUCT_PACKAGES += \
-    android.hardware.audio.effect@7.0-impl:32 \
-    android.hardware.audio@7.1-impl:32 \
+    android.hardware.audio@7.0-impl \
     android.hardware.audio.service \
+    android.hardware.audio.effect@7.0-impl \
     android.hardware.bluetooth.audio-impl \
     audio.bluetooth.default \
-    audio.primary.erd8825 \
     audio.primary.default \
     audio.r_submix.default \
     audio.usb.default
