@@ -33,6 +33,17 @@ on init
     chown system system /sys/kernel/asv/power_model_2
     chown system system /sys/kernel/asv/power_model_3
 
+    # Limit discard size to 128MB in order to avoid long IO latency
+    write /sys/block/sda/queue/discard_max_bytes 134217728
+
+    # Filesystem tuning
+    write /sys/block/sda/queue/iostats 0
+    write /sys/block/sda/queue/read_ahead_kb 512
+    write /sys/block/sda/queue/nr_requests 64
+    write /sys/block/sda/queue/iosched/slice_idle 0
+
+    write /dev/sys/fs/by-name/userdata/iostat_enable 0
+
     ## SCSC BT
     chown bluetooth bluetooth /sys/module/scsc_bt/parameters/bluetooth_address
 
@@ -166,6 +177,12 @@ on init
     chown system system /dev/device_throughput
     chown system system /dev/device_throughput_max
 
+    # VM
+    write /proc/sys/vm/dirty_expire_centisecs 3000
+
+    # khugepaged tuning
+    write /sys/kernel/mm/transparent_hugepage/khugepaged/scan_sleep_millisecs 60000
+
     # Power HAL
     chown system system /dev/cluster0_freq_min
     chown system system /dev/cluster0_freq_max
@@ -200,8 +217,8 @@ on init
     setprop ro.boot.hardware.revision ${ro.revision}
 
 on post-fs
-    # set RLIMIT_MEMLOCK to 64MB
-    setrlimit 8 67108864 67108864
+    # set RLIMIT_MEMLOCK to 64KB
+    setrlimit 8 65536 65536
 
 on post-fs-data
 # MST/NFC Switch
@@ -432,6 +449,8 @@ on boot
     chmod 0664 /dev/cpuset/moderate/cpus
 
     setprop wifi.interface wlan0
+
+    write /proc/sys/vm/watermark_scale_factor 200
 
     # SCSC do not enable autorecovery in dev builds
     write /sys/module/scsc_mx/parameters/disable_recovery_handling 2
