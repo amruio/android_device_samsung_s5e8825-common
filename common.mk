@@ -126,6 +126,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     android.hardware.composer.hwc3-service.slsi
 
+# EPIC HAL
+PRODUCT_PACKAGES += \
+    vendor.samsung_slsi.hardware.epic@1.0-impl \
+    vendor.samsung_slsi.hardware.epic@1.0-service \
+    libepicoperator
+
 # Vibrator
 PRODUCT_PACKAGES += \
     android.hardware.vibrator-service.samsung
