@@ -86,6 +86,11 @@ vendor/etc/media_codecs.xml
 vendor/etc/media_codecs_performance.xml
 vendor/etc/media_profiles_V1_0.xml
 
+## EPIC
+vendor/etc/epic.json
+vendor/lib/libepic_helper.so
+vendor/lib64/libepic_helper.so
+
 ## Fingerprint
 vendor/etc/init/fingerprint_common.rc
 vendor/etc/init/init.fingerprint.rc
