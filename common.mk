@@ -42,8 +42,9 @@ PRODUCT_PACKAGES += \
     audio.r_submix.default \
     audio.usb.default
 
+# Dolby
 PRODUCT_PACKAGES += \
-    SamsungDAP-custom
+    XiaomiDolby
 
 TARGET_EXCLUDES_AUDIOFX := true
 
