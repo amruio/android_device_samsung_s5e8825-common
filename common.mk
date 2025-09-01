@@ -279,10 +279,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     SamsungDAP-custom
 
-# Samsung Doze
-PRODUCT_PACKAGES += \
-    SamsungDoze
-
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors-service.samsung-multihal \
