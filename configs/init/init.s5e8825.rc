@@ -12,6 +12,9 @@ on early-init
     exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules mz_tee_driver.ko
 
 on init
+    # Permissions for fastcharge
+    chown system system /sys/class/power_supply/battery/charging_enabled
+
     # Disable UFS powersaving
     write /sys/devices/platform/13500000.ufs/clkgate_enable 0
     write /sys/devices/platform/13500000.ufs/auto_hibern8 0
@@ -33,7 +36,6 @@ on init
     write /sys/block/sda/queue/iostats 0
     write /sys/block/sda/queue/read_ahead_kb 512
     write /sys/block/sda/queue/nr_requests 64
-    write /sys/block/sda/queue/iosched/slice_idle 0
     write /dev/sys/fs/by-name/userdata/iostat_enable 0
 
     # SCSC BT
