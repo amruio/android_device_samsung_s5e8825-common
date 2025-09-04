@@ -30,6 +30,9 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 # Private keys
 $(call inherit-product-if-exists, vendor/lineage-priv/keys/keys.mk)
 
+# Board
+TARGET_BOARD_PLATFORM := erd8825
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@7.0-impl \
@@ -171,13 +174,6 @@ PRODUCT_PACKAGES += toolbox.vendor_ramdisk
 
 # Keymint
 PRODUCT_PACKAGES += libshim_crypto
-
-# Lineage Health
-PRODUCT_PACKAGES += vendor.lineage.health-service.default
-
-$(call soong_config_set,lineage_health,fast_charge_node,/sys/class/sec/switch/afc_disable)
-$(call soong_config_set,lineage_health,fast_charge_value_none,1)
-$(call soong_config_set,lineage_health,fast_charge_value_fast_charge,0)
 
 # Memtrack
 PRODUCT_PACKAGES += android.hardware.memtrack-service.samsung-mali
