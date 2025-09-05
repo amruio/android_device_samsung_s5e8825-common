@@ -1,0 +1,2 @@
+attribute vendor_sysfs_sec_switch;
+attribute vendor_sysfs_sec_switch_writable;

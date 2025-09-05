@@ -1,0 +1,2 @@
+typeattribute sysfs_sec_switch vendor_sysfs_sec_switch;
+typeattribute sysfs_sec_switch_writable vendor_sysfs_sec_switch_writable;
