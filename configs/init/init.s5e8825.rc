@@ -16,6 +16,8 @@ on init
     # Allow system to manipulate Fast Charge node
     chown system system /sys/class/sec/switch/afc_disable
     chown system system /sys/class/power_supply/battery/charging_enabled
+    # Enable AFC by default
+    write /sys/class/sec/switch/afc_disable 0
 
     # Disable UFS powersaving
     write /sys/devices/platform/13500000.ufs/clkgate_enable 0
