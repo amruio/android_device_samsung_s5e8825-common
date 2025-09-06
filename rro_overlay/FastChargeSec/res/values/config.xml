@@ -15,4 +15,6 @@
 <resources>
     <!-- Path to Fast Charging sysfs node -->
     <string name="config_FastChargePath" translatable="false">/sys/class/sec/switch/afc_disable</string>
+    <!-- Invert Fast Charging logic -->
+    <bool name="config_FastChargeInverted">true</bool>
 </resources>
