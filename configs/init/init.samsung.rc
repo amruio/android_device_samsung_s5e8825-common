@@ -172,7 +172,6 @@ on post-fs-data
 
     # NFC KEY
     mkdir /data/vendor/nfc 0770 nfc nfc
-    copy /system/etc/nfc_key /data/nfc/Key
     chmod 660 /data/nfc/Key
     chown nfc nfc /data/nfc/Key
 
@@ -354,9 +353,6 @@ on boot
     mkdir /efs/Battery 0775 radio system
     chown radio system /efs/Battery
     chmod 0775 /efs/Battery
-    copy /system/vendor/firmware/battery_data.dat /efs/Battery/battery_data.dat
-    chmod 0400 /efs/Battery/battery_data.dat
-    write /sys/class/power_supply/battery/batt_update_data "/efs/Battery/battery_data.dat"
     chown system radio /sys/class/power_supply/battery/batt_ext_dev_chg
     chown system radio /efs/Battery/fg_full_voltage
     chown system radio /sys/class/power_supply/battery/fg_full_voltage

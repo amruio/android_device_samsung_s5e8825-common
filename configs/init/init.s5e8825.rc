@@ -5,9 +5,6 @@ on early-init
     exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor_dlkm/lib/modules input_booster_lkm.ko
     exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor_dlkm/lib/modules sec_debug_coredump.ko
 
-    # Property used by vintf for sku specific manifests
-    setprop ro.boot.product.hardware.sku ${ro.boot.hardware.sku}
-
     # MZ
     exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor_dlkm/lib/modules mz_tee_driver.ko
 
@@ -271,11 +268,6 @@ on post-fs-data
     # GNSS data
     mkdir /data/vendor/gps 0771 system system
     mkdir /data/vendor/log/gps 0771 system system
-    rm /data/vendor/gps/gps_started
-    rm /data/vendor/gps/glonass_started
-    rm /data/vendor/gps/beidou_started
-    rm /data/vendor/gps/smd_started
-    rm /data/vendor/gps/sv_cno.info
 
     # Permissions for Bluetooth
     setprop ro.bt.bdaddr_path "/mnt/vendor/efs/bluetooth/bt_addr"
@@ -411,9 +403,6 @@ on early-boot
     verity_update_state
 
 on boot
-    # Background throttling
-    write /sys/block/sda/queue/wbt_lat_usec 75000
-
     # SDHMS Slowdown : Cpuset
     mkdir /dev/cpuset/abnormal
     write /dev/cpuset/abnormal/cpus 0-3
@@ -692,7 +681,7 @@ service watchdogd /system/bin/watchdogd 10 20
 on property:ro.boot.slot_suffix=*
     setprop vendor.cbd.partition modem${ro.boot.slot_suffix}
 
-on property:ro.factory.factory_binary=factory
+on property:ro.vendor.factory_binary=factory
     # ASV-G Spec
     chmod 0440 /sys/kernel/asv-g/cpucl0_fused_volt
     chmod 0440 /sys/kernel/asv-g/cpucl0_grp_volt
