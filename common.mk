@@ -163,6 +163,7 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/init/init.samsung.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.samsung.rc \
     $(COMMON_PATH)/configs/init/init.fingerprint.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.fingerprint.rc \
     $(COMMON_PATH)/configs/init/init.ril.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.ril.rc \
+    $(COMMON_PATH)/configs/init/init.wifi.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.wifi.rc \
     $(COMMON_PATH)/configs/init/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/ueventd.rc
 
 $(call soong_config_set,libinit,vendor_init_lib,//$(COMMON_PATH):init_s5e8825)
@@ -181,6 +182,7 @@ PRODUCT_PACKAGES += libshim_crypto
 # Lineage Health
 PRODUCT_PACKAGES += vendor.lineage.health-service.default
 
+$(call soong_config_set,lineage_health,charging_control_charging_path,/sys/class/power_supply/battery/charging_enabled)
 $(call soong_config_set,lineage_health,fast_charge_node,/sys/class/sec/switch/afc_disable)
 $(call soong_config_set,lineage_health,fast_charge_value_none,1)
 $(call soong_config_set,lineage_health,fast_charge_value_fast_charge,0)
