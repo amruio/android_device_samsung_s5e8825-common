@@ -317,3 +317,21 @@ PRODUCT_CFI_INCLUDE_PATHS += hardware/samsung_slsi/scsc_wifibt/wpa_supplicant_li
 
 # Vibrator
 PRODUCT_PACKAGES += android.hardware.vibrator-service.samsung
+
+#RisingOS Flags
+RISING_MAINTAINER="Al-Yassin 105"
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    RisingChipset="s5e8825" \
+    RisingMaintainer="Al-Yassin 105"
+
+RISING_MAINTAINER := Al-Yassin 105
+# Disable/enable blur support, false by default
+TARGET_ENABLE_BLUR := false
+# Whether to ship aperture camera, false by default
+PRODUCT_NO_CAMERA := false
+# Whether to ship lawnchair launcher, false by default
+TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := false 
+# VANILLA build with MICROG
+WITH_GMS := false
+WITH_MICROG := true
