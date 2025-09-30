@@ -57,10 +57,11 @@ def AddModelImage(info, model, basename, dest):
     info.script.AppendExtra(',"");')
 
 def OTA_InstallEnd(info):
-  #AddImage(info, "dtbo.img", "/dev/block/by-name/dtbo")
+  AddImage(info, "dtbo.img", "/dev/block/by-name/dtbo")
   AddImage(info, "vbmeta.img", "/dev/block/by-name/vbmeta")
   AddImage(info, "vendor_boot.img", "/dev/block/by-name/vendor_boot")
   AddModelImage(info, "SC-53C", "dtbo_jpn", "/dev/block/by-name/dtbo")
+  AddModelImage(info, "m34x", "dtbo_m34x", "/dev/block/by-name/dtbo")
 
   if "RADIO/models" in info.input_zip.namelist():
     modelsIncluded = []
