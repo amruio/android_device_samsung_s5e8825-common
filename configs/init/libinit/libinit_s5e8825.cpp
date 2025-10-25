@@ -189,14 +189,6 @@ static const variant_info_t m33xins = {
   .build_desc = "m33xins-user 15 AP3A.240905.015.A2 M336BUXXSDFYH1 release-keys",
 };
 
-static const variant_info_t m33xins = {
-    .device = "m33xins",
-    .model = "SM-M336BU",
-    .name = "m33xins",
-    .build_fingerprint = "samsung/m33xins/essi:15/AP3A.240905.015.A2/M336BUXXSDFYH1:user/release-keys",
-    .build_desc = "m33xins-user 15 AP3A.240905.015.A2 M336BUXXSDFYH1 release-keys",
-};
-
 static const variant_info_t m33xktt = {
   .model = "SM-M336K",
   .name = "m33xktt",
