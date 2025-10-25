@@ -227,6 +227,14 @@
         </interface>
     </hal>
     <hal format="aidl" optional="true">
+      <name>vendor.samsung.hardware.security.hermes</name>
+        <version>1</version>
+        <interface>
+            <name>ISehHermesCommand</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
         <name>vendor.samsung.hardware.security.vaultkeeper</name>
         <version>1</version>
         <interface>
