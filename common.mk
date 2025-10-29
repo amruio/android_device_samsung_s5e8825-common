@@ -353,3 +353,5 @@ PRODUCT_PACKAGES += init.wifi.rc
 
 # Vibrator
 PRODUCT_PACKAGES += android.hardware.vibrator-service.samsung
+
+WITH_GMS := false
