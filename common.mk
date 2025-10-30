@@ -355,3 +355,5 @@ PRODUCT_PACKAGES += init.wifi.rc
 PRODUCT_PACKAGES += android.hardware.vibrator-service.samsung
 
 WITH_GMS := false
+
+TARGET_OPTIMIZED_DEXOPT := true
