@@ -49,14 +49,6 @@
 /efs/usb_hw_param(/.*)?                                                                     u:object_r:sec_efs_file:s0
 /efs/wv.keys                                                                                u:object_r:sec_efs_file:s0
 
-# EPIC
-/dev/exynos-migov                                                                           u:object_r:migov_device:s0
-/vendor/bin/epic                                                                            u:object_r:epicd_exec:s0
-/vendor/bin/hw/vendor\.samsung_slsi\.hardware\.epic@1\.0-service                            u:object_r:hal_vendor_epic_service_default_exec:s0
-/vendor/etc/epic\.json                                                                      u:object_r:hal_epic_default_config_file:s0
-/vendor/lib64/libepic_helper\.so                                                         u:object_r:hal_epic_helper_library:s0
-/vendor/lib64/libepicoperator\.so                                                        u:object_r:hal_epic_helper_library:s0
-
 # Fingerprint
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint-service\.s5e8825  u:object_r:hal_fingerprint_default_exec:s0
 /dev/goodix_fp                                                                              u:object_r:fingerprint_device:s0
@@ -91,9 +83,9 @@
 /(vendor|system/vendor)/bin/hw/android\.hardware\.nfc-service\.st                           u:object_r:hal_nfc_default_exec:s0
 /dev/pn547                                                                                  u:object_r:nxp_nfc_device:s0
 /dev/st21nfc                                                                                u:object_r:nfc_device:s0
-/dev/sec-nfc                                                                                u:object_r:nfc_device:s0
 
 # Performance Control Nodes
+
 /sys/devices/system/cpu/cpufreq/policy[0-9]+/(scaling_min_freq|scaling_max_freq)            u:object_r:sysfs_performance:s0
 /sys/class/devfreq/17000010\.devfreq_mif(/.*)?                                              u:object_r:sysfs_performance:s0
 /sys/class/devfreq/17000070\.devfreq_isp(/.*)?                                              u:object_r:sysfs_performance:s0
@@ -114,11 +106,6 @@
 
 # Wakeup
 /sys/devices/platform/(.*)/wakeup[0-9]*(/.*)?                                               u:object_r:sysfs_wakeup:s0
-
-# Hermes
-/vendor/bin/hermesd                                                                         u:object_r:hermesd_exec:s0
-/vendor/hw/vendor\.samsung\.hardware\.security\.hermes-service                              u:object_r:hermesd_exec:s0
-/vendor/etc/secnvm(/.*)?                                                                    u:object_r:secnvm_vendor_etc_file:s0
 
 # ZRAM
 /dev/block/zram0                                                                            u:object_r:swap_block_device:s0

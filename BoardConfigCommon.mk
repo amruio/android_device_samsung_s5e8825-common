@@ -19,7 +19,7 @@ COMMON_PATH := device/samsung/s5e8825-common
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-2a-dotprod
 TARGET_CPU_ABI := arm64-v8a
-TARGET_CPU_VARIANT := generic
+TARGET_CPU_VARIANT := cortex-a55
 
 # ART
 ART_BUILD_TARGET_NDEBUG := true
@@ -165,9 +165,7 @@ TARGET_SOC := s5e8825
 include hardware/samsung_slsi-linaro/config/BoardConfig8825.mk
 
 # Properties
-TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
-TARGET_PRODUCT_PROP += $(COMMON_PATH)/product.prop
-TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
+TARGET_VENDOR_PROP += $(COMMON_PATH)/configs/props/vendor.prop
 
 # Recovery
 BOARD_INCLUDE_RECOVERY_DTBO := true
@@ -183,7 +181,7 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)/configs
 ENABLE_VENDOR_RIL_SERVICE := true
 
 # Security
-VENDOR_SECURITY_PATCH := 2025-09-01
+VENDOR_SECURITY_PATCH := 2025-10-01
 
 # SELinux
 BOARD_SEPOLICY_TEE_FLAVOR := teegris

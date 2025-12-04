@@ -10,29 +10,50 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "init.fingerprint.rc",
-    src: "init.fingerprint.rc",
-    sub_dir: "init",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "init.gps.rc",
-    src: "init.gps.rc",
-    sub_dir: "init",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "init.ril.rc",
-    src: "init.ril.rc",
-    sub_dir: "init",
-    vendor: true,
-}
-
-prebuilt_etc {
     name: "init.s5e8825.rc",
     src: "init.s5e8825.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.s5e8825.audio.rc",
+    src: "init.s5e8825.audio.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.s5e8825.bluetooth.rc",
+    src: "init.s5e8825.bluetooth.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.s5e8825.camera.rc",
+    src: "init.s5e8825.camera.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.s5e8825.fingerprint.rc",
+    src: "init.s5e8825.fingerprint.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.s5e8825.gps.rc",
+    src: "init.s5e8825.gps.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.s5e8825.ril.rc",
+    src: "init.s5e8825.ril.rc",
     sub_dir: "init",
     vendor: true,
 }
@@ -45,6 +66,13 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "init.s5e8825.sensors.rc",
+    src: "init.s5e8825.sensors.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
     name: "init.s5e8825.usb.rc",
     src: "init.s5e8825.usb.rc",
     sub_dir: "init",
@@ -52,15 +80,8 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "init.sensorhub.rc",
-    src: "init.sensorhub.rc",
-    sub_dir: "init",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "init.wifi.rc",
-    src: "init.wifi.rc",
+    name: "init.s5e8825.wifi.rc",
+    src: "init.s5e8825.wifi.rc",
     sub_dir: "init",
     vendor: true,
 }

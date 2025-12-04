@@ -60,6 +60,9 @@ PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/enginedefault/config/example/phone/audio_policy_engine_product_strategies.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_engine_product_strategies.xml \
     frameworks/av/services/audiopolicy/enginedefault/config/example/phone/audio_policy_engine_stream_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_engine_stream_volumes.xml
 
+# Audio - Init
+PRODUCT_PACKAGES += init.s5e8825.audio.rc
+
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-impl:64 \
@@ -70,16 +73,21 @@ PRODUCT_COPY_FILES += \
     hardware/samsung_slsi/libbt/conf/bt_did.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/bt_did.conf \
     hardware/samsung_slsi/libbt/conf/bt_vendor.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/bt_vendor.conf
 
+# Bluetooth - Init
+PRODUCT_PACKAGES += init.s5e8825.bluetooth.rc
+
 # Camera
 PRODUCT_PACKAGES += android.hardware.camera.provider-service.samsung
-
-PRODUCT_PACKAGES += \
-    libvpl \
-    libshim_camera
 
 $(call soong_config_set,samsungCameraVars,extra_ids,60)
 $(call soong_config_set,samsungCameraVars,needs_sec_reserved_field,true)
 $(call soong_config_set,samsungCameraVars,usage_64bit,true)
+
+# Camera - Init
+PRODUCT_PACKAGES += init.s5e8825.camera.rc
+
+# Camera - Shims
+PRODUCT_PACKAGES += libvpl
 
 # Charger
 PRODUCT_PACKAGES += charger_res_images_vendor
@@ -95,8 +103,6 @@ PRODUCT_PACKAGES += \
     libExynosC2Vp8Enc \
     codec2.vendor.base.policy \
     codec2.vendor.ext.policy
-
-$(call soong_config_set,openmax,legacy_mfc,true)
 
 # ConfigStore
 PRODUCT_PACKAGES += disable_configstore
@@ -118,12 +124,6 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 # DRM
 PRODUCT_PACKAGES += android.hardware.drm-service.clearkey
 
-# EPIC
-PRODUCT_PACKAGES += \
-    libepicoperator \
-    vendor.samsung_slsi.hardware.epic@1.0-impl \
-    vendor.samsung_slsi.hardware.epic@1.0-service
-
 # fastbootd
 PRODUCT_PACKAGES += fastbootd
 
@@ -131,7 +131,7 @@ PRODUCT_PACKAGES += fastbootd
 PRODUCT_PACKAGES += android.hardware.biometrics.fingerprint-service.s5e8825
 
 # Fingerprint - Init
-PRODUCT_PACKAGES += init.fingerprint.rc
+PRODUCT_PACKAGES += init.s5e8825.fingerprint.rc
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
@@ -139,7 +139,7 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-service
 
 # GPS - Init
-PRODUCT_PACKAGES += init.gps.rc
+PRODUCT_PACKAGES += init.s5e8825.gps.rc
 
 # Graphics
 $(call soong_config_set,exynos_hwc,force_client_video,true)
@@ -153,8 +153,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fstab.s5e8825 \
     init.s5e8825.rc \
-    init.s5e8825.recovery.rc \
-    init.s5e8825.usb.rc \
     ueventd.s5e8825.rc
 
 PRODUCT_COPY_FILES += $(COMMON_PATH)/configs/init/fstab.s5e8825:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/fstab.s5e8825
@@ -175,8 +173,6 @@ PRODUCT_PACKAGES += \
     lib_android_keymaster_keymint_utils.vendor \
     libcppbor_external.vendor \
     libkeymint.vendor
-
-PRODUCT_PACKAGES += libshim_crypto
 
 # Kernel Modules
 PRODUCT_PACKAGES += toolbox.vendor_ramdisk
@@ -276,6 +272,9 @@ PRODUCT_PACKAGES += android.hardware.power-service.pixel-libperfmgr
 # Power - Powerhint
 PRODUCT_PACKAGES += powerhint.json
 
+# Recovery
+PRODUCT_PACKAGES += init.s5e8825.recovery.rc
+
 # RIL
 PRODUCT_PACKAGES += \
     cbd \
@@ -288,7 +287,7 @@ $(call soong_config_set,cbd,protocol,sipc)
 PRODUCT_PACKAGES += sehradiomanager.conf
 
 # RIL - Init
-PRODUCT_PACKAGES += init.ril.rc
+PRODUCT_PACKAGES += init.s5e8825.ril.rc
 
 # Samsung DAP
 PRODUCT_PACKAGES += SamsungDAP-custom
@@ -298,10 +297,9 @@ PRODUCT_PACKAGES += SamsungDoze
 
 # Sensors
 PRODUCT_PACKAGES += android.hardware.sensors-service.samsung-multihal
-PRODUCT_PACKAGES += libshim_sensorndkbridge
 
 # Sensors - Init
-PRODUCT_PACKAGES += init.sensorhub.rc
+PRODUCT_PACKAGES += init.s5e8825.sensors.rc
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
@@ -334,6 +332,9 @@ PRODUCT_PACKAGES += \
 
 $(call soong_config_set,samsungUsbGadgetVars,gadget_name,13200000.dwc3)
 
+# USB - Init
+PRODUCT_PACKAGES += init.s5e8825.usb.rc
+
 # Wi-Fi
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
@@ -349,7 +350,7 @@ PRODUCT_PACKAGES += \
     wpa_supplicant_overlay.conf
 
 # Wi-Fi - Init
-PRODUCT_PACKAGES += init.wifi.rc
+PRODUCT_PACKAGES += init.s5e8825.wifi.rc
 
 # Vibrator
 PRODUCT_PACKAGES += android.hardware.vibrator-service.samsung

@@ -8,13 +8,13 @@ from extract_utils.fixups_blob import (
     blob_fixup,
     blob_fixups_user_type,
 )
-from extract_utils.main import (
-    ExtractUtils,
-    ExtractUtilsModule,
-)
 from extract_utils.fixups_lib import (
     lib_fixups,
     lib_fixups_user_type,
+)
+from extract_utils.main import (
+    ExtractUtils,
+    ExtractUtilsModule,
 )
 
 namespace_imports = [
@@ -78,6 +78,7 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('android.hardware.security.sharedsecret-V1-ndk_platform.so',
                         'android.hardware.security.sharedsecret-V1-ndk.so')
         .add_needed('android.hardware.security.rkp-V3-ndk.so')
+        .add_needed('libbase_shim.so')
         .add_needed('libshim_crypto.so')
         .replace_needed('libcrypto.so', 'libcrypto-tm.so'),
     'vendor/bin/hw/android.hardware.security.keymint-service.samsung': blob_fixup()
